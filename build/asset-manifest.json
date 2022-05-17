@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/bota/static/css/main.7adc2257.css",
+    "main.js": "/bota/static/js/main.e24583d4.js",
+    "static/js/787.a7e9683c.chunk.js": "/bota/static/js/787.a7e9683c.chunk.js",
+    "static/media/logo.png": "/bota/static/media/logo.ebcd9ab0569b8f52128f.png",
+    "index.html": "/bota/index.html",
+    "main.7adc2257.css.map": "/bota/static/css/main.7adc2257.css.map",
+    "main.e24583d4.js.map": "/bota/static/js/main.e24583d4.js.map",
+    "787.a7e9683c.chunk.js.map": "/bota/static/js/787.a7e9683c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7adc2257.css",
+    "static/js/main.e24583d4.js"
+  ]
+}
