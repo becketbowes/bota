@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Home from './components/home/index';
 import Product from './components/product/index';
 import Head from './components/head';
+import Admin from './components/admin'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -22,7 +23,8 @@ function App() {
     return (
       <div>
         <Head currentPage={currentPage} handlePageChange={handlePageChange} />
-        {renderPage()}
+        {/* {renderPage()} */}
+        <Admin />
       </div>
     );
   }
