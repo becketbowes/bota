@@ -26,6 +26,10 @@ const productSchema = new Schema(
         usdPrice: {
             type: Number,
             require: true
+        },
+        quantity: {
+            type: Number,
+            default: 0
         }
     }
 );
