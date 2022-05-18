@@ -21,7 +21,7 @@
 * {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
-  font-size: medium;
+  /* font-size: medium; */
   background-color: var(--back);
   color: var(--front);
   text-decoration: none;
@@ -113,4 +113,30 @@ h5 {
     margin-right: 5%;
     margin-top: 20px;
   }
+}
+
+/* Product page style begins  */
+.product{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  background-color: var(--back);
+  color: var(--front);
+  text-decoration: none;
+  list-style-type: none;
+}
+.product-title {
+  margin-left: 500px;
+  align-content: center;
+  text-align: center;
+  margin: 50px;
+  padding: 100px;
+  word-spacing: 10px;
+  line-height: 70px;
+  font-size: 400px;
+  font-weight: 300px;
+}
+
+.navbarmain {
+  width: 20%;
+
 }
