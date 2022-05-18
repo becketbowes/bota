@@ -2,6 +2,7 @@ import logo from '../../assets/img/botalogoclear.png';
 import dot from '../../assets/img/botadot.png';
 import Nav from '../nav';
 
+
 function Head() {
     return (
         <header>
@@ -9,7 +10,7 @@ function Head() {
             <img src={logo} className="botalogo" alt="bota" />
             <img src={dot} className="botadot" alt="a circle, a round round circle" />
             </div>
-            <Nav />
+          
         </header>
     );
 }
