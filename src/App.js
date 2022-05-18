@@ -15,6 +15,10 @@ function App() {
       if (currentPage === 'Product') {
         return <Product />;
       }
+      //please remove this and the following three lines before going to production. They are unprofessional and embarassing, but they prevent the yellow warning label in dev.
+      if (currentPage === 'nobody asked, Harold') {
+        return <Admin />
+      }
       return < Home/>;
     };
 
@@ -23,8 +27,8 @@ function App() {
     return (
       <div>
         <Head currentPage={currentPage} handlePageChange={handlePageChange} />
-        {/* {renderPage()} */}
-        <Admin />
+        {renderPage()}
+        {/* <Admin /> */}
       </div>
     );
   }

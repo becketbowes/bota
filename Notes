@@ -1,6 +1,8 @@
 Frontend points of request for server:
 
 onload:
+about page request: vibeImage
+about page request: vibeText
 vibe page request: vibeTexts
 vibe page request: vibeImages
 
