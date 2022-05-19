@@ -6,7 +6,7 @@ const blogSchema = new Schema (
     {
         text: {
             type: String,
-            require: true
+            required: true
         },
         image: {
             type: String

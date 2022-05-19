@@ -6,27 +6,27 @@ const productSchema = new Schema(
     {
         sku: {
             type: String,
-            require: true
+            required: true
         },
         name: {
             type: String,
-            require: true
+            required: true
         },
         description: {
             type: String,
-            require: true
+            required: true
         },
         usdPrice: {
             type: Number,
-            require: true
+            required: true
         },
         image: {
             type: String,
-            require: true
+            required: true
         },
         imageAlt: {
             type: String,
-            require: true
+            required: true
         },
         quantity: [inventorySchema]
     }

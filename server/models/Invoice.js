@@ -12,7 +12,7 @@ const invoiceSchema = new Schema(
                 name: String,
                 quantity: {
                     type: Number,
-                    require: true,
+                    required: true,
                     min: [1, 'Quantity cannot be less than 1!']
                 }
             }
