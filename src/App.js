@@ -46,7 +46,7 @@ function App() {
       <div>
         <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
         {renderPage()}
-        {/* <Admin /> */}
+        <Admin />
       </div>
       <Toe></Toe>
       </>
