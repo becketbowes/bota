@@ -1,26 +1,31 @@
 Frontend points of request for server:
 
 onload:
+blog page request: (return text/image/createdBy)
 about page request: vibeImage
 about page request: vibeText
 vibe page request: vibeTexts
 vibe page request: vibeImages
 
 shop:
-products, inventory
+products(return all products)
+product(return product by id)
 
 febe:
-view all products (with inventory)
-view all receipts with total sales, total sales in last month, total sales in last year
-add a product
-update a product
-remove a product
+query new messages from contact page(filter by 'read' boolean)(return all info)
+mutate put blog post(place image, text) 
 
-update vibeImage
-update vibeText
+query view all products (with inventory)
+query view all receipts with total sales, total sales in last month, total sales in last year
+mutate add a product
+mutate update a product
+mutate remove a product
 
-view all admins
-add an admin
-edit an admin
-remove an admin
+mutate update vibeImage by id
+mutate update vibeText
+
+query view all admins
+mutate add an admin
+mutate edit an admin
+mutate remove an admin
 
