@@ -31,12 +31,6 @@ function Nav({ currentPage, handlePageChange, nav }) {
                 Gift
               </span>
           </li>
-          <li className="link">
-            <span href='#Contact' onClick={() => handlePageChange('Contact')}
-              className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}>
-                Contact
-              </span>
-          </li>
         </ul>
 
       </div>

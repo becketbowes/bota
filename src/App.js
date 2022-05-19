@@ -8,6 +8,7 @@ import About from './components/about/index';
 import Shop from './components/shop/index';
 import Gift from './components/gift/index';
 import Contact from './components/contact/index';
+import Toe from './components/toe'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -47,6 +48,7 @@ function App() {
         {renderPage()}
         {/* <Admin /> */}
       </div>
+      <Toe></Toe>
       </>
     );
   

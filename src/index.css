@@ -119,6 +119,19 @@ h5 {
   margin-left: 10%
 }
 
+/* footer styles */
+.toes {
+position: absolute;
+bottom: 10px;
+left: 50%;
+right: 50%;
+
+}
+
+.botadotdot {
+  width: 30px;
+}
+
 /* media queries */
 @media screen and (min-width: 1000px) {
   h1 {
