@@ -7,15 +7,7 @@ const productSchema = new Schema(
             type: String,
             require: true
         },
-        title: {
-            type: String,
-            require: true
-        },
-        image: {
-            type: String,
-            require: true
-        },
-        imageAlt: {
+        name: {
             type: String,
             require: true
         },
@@ -30,7 +22,15 @@ const productSchema = new Schema(
         quantity: {
             type: Number,
             default: 0
-        }
+        },
+        image: {
+            type: String,
+            require: true
+        },
+        imageAlt: {
+            type: String,
+            require: true
+        },
     }
 );
 
