@@ -16,8 +16,11 @@ function Product () {
             <div className="product-item">
             <img src={productimage} className="my-2" style={{ width: "40%", height: "700px" }} alt="cover" />   
             <h1 className="product-name"> bota body cream</h1> 
-
+            <div>
+                Add to Cart
             </div>
+            </div>
+           
 
         </div>
        
