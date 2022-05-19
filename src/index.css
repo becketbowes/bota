@@ -121,7 +121,9 @@ h5 {
 
 /* footer styles */
 .toes {
-position: absolute;
+
+position:relative;
+
 bottom: 10px;
 left: 50%;
 right: 50%;
@@ -130,6 +132,7 @@ right: 50%;
 
 .botadotdot {
   width: 30px;
+  margin-top: 30px;
 }
 
 /* media queries */
