@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function Nav({ currentPage, handlePageChange, nav }) {
   if (!nav) {
     return null
