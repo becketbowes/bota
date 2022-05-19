@@ -1,12 +1,14 @@
 import React from 'react';
 
-function Nav({ currentPage, handlePageChange }) {
+
+function Nav({ currentPage, handlePageChange, nav }) {
+  if (!nav) {
+    return null
+  }
   return (
-  
-   
-      <div className='navmenu'>
-  
+      <div className='navbarmain'>
         <ul>
+
           <li className="link">
             <span href='#About' onClick={() => handlePageChange('About')}
               className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}>
@@ -31,13 +33,8 @@ function Nav({ currentPage, handlePageChange }) {
                 Gift
               </span>
           </li>
-          <li className="link">
-            <span href='#Contact' onClick={() => handlePageChange('Contact')}
-              className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}>
-                Contact
-              </span>
-          </li>
         </ul>
+   
 
       </div>
   
