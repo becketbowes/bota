@@ -2,6 +2,7 @@ const Inventory = require("./Inventory");
 const Invoice = require("./Invoice");
 const Product = require("./Product");
 const VibeImage = require("./VibeImage");
-const VIbeText = require("./VibeText");
+const VibeText = require("./VibeText");
+const Note = require("./Note");
 
-module.exports = { Inventory, Invoice, Product, VibeImage, VibeText };
+module.exports = { Inventory, Invoice, Product, VibeImage, VibeText, Note };
