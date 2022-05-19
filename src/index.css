@@ -20,8 +20,8 @@
 /* general rules, setting theme */
 * {
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 300;
-  font-size: medium;
+  /* font-weight: 300; */
+  /* font-size: medium; */
   background-color: var(--back);
   color: var(--front);
   text-decoration: none;
@@ -29,8 +29,8 @@
 }
 
 h1 {
-  font-weight: 500;
-  font-size: large;
+  /* font-weight: 500;
+  font-size: large; */
 }
 
 h2 {
@@ -159,4 +159,45 @@ right: 50%;
     margin-right: 5%;
     margin-top: 20px;
   }
+}
+
+/* Product page style begins  */
+.product{
+  font-family: 'Josefin Sans', sans-serif;
+  /* background-color: var(--back); */
+  color: var(--front);
+  text-decoration: none;
+  list-style-type: none;
+}
+.product-title {
+  margin-left: 500px;
+  align-content: center;
+  text-align: center;
+  margin: 50px;
+  padding: 100px;
+  word-spacing: 10px;
+  line-height: 70px;
+  font-size: 400px;
+  font-weight: 300px;
+}
+
+.navbarmain {
+  width: 20%;
+
+}
+.product-name {
+  margin: 50px;
+  padding: 30px;
+  word-spacing: 10px;
+  line-height: 70px;
+  font-size: 100px;
+  margin-right: 30px;
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+.product-item {
+  position: relative;
+  text-align: center;
+ 
 }
