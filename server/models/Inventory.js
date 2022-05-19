@@ -1,21 +1,12 @@
-// const mongoose = require("mongoose");
-// const { Schema, model } = mongoose;
+const { Schema } = require('mongoose');
 
-// const inventorySchema = new Schema(
-//     {
-//         product: [
-//             {
-//                 type: Schema.Types.ObjectId,
-//                 ref: 'Products'
-//             }
-//         ],
-//         quantity: {
-//             type: Number,
-//             require: true
-//         }
-//     }
-// );
+const inventorySchema = new Schema(
+    {
+        quantity: {
+            type: Number,
+            default: 0
+        }
+    }
+)
 
-// const Inventory = model("Inventory", inventorySchema);
-
-// module.exports = Inventory;
+module.exports = inventorySchema;

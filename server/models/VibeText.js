@@ -3,7 +3,7 @@ const { Schema, model } = mongoose;
 
 const vibeTextSchema = new Schema(
     {
-
+        
     }
 );
 
