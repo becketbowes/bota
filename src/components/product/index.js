@@ -1,5 +1,5 @@
 import React from 'react';
-import botalogoclear from '../../assets/img/botalogoclear.png'
+import productimage from '../../assets/img/productimage.png'
 
 function Product () {
 
@@ -13,12 +13,12 @@ function Product () {
                 <h1>&</h1>
                 <h1>PLANET HEALTH</h1>
             </div>
+            <div className="product-item">
+            <img src={productimage} className="my-2" style={{ width: "40%", height: "700px" }} alt="cover" />   
+            <h1 className="product-name"> bota body cream</h1> 
 
-            <img src={botalogoclear} className="my-2" style={{ width: "40%", height: "700px" }} alt="cover" />   
+            </div>
 
-            <h1 className="product-name"> bota body cream</h1>     
-
-            
         </div>
        
     )
