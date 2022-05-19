@@ -20,7 +20,7 @@
 /* general rules, setting theme */
 * {
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 300;
+  /* font-weight: 300; */
   /* font-size: medium; */
   background-color: var(--back);
   color: var(--front);
@@ -29,8 +29,8 @@
 }
 
 h1 {
-  font-weight: 500;
-  font-size: large;
+  /* font-weight: 500;
+  font-size: large; */
 }
 
 h2 {
@@ -118,7 +118,6 @@ h5 {
 /* Product page style begins  */
 .product{
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 300;
   background-color: var(--back);
   color: var(--front);
   text-decoration: none;
@@ -139,4 +138,13 @@ h5 {
 .navbarmain {
   width: 20%;
 
+}
+.product-name {
+  text-align: center;
+  margin: 50px;
+  padding: 30px;
+  word-spacing: 10px;
+  line-height: 70px;
+  font-size: 100px;
+  margin-right: 30px;
 }

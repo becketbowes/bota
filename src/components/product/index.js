@@ -16,7 +16,9 @@ function Product () {
 
             <img src={botalogoclear} className="my-2" style={{ width: "40%", height: "700px" }} alt="cover" />   
 
-            <h1> bota body cream</h1>     
+            <h1 className="product-name"> bota body cream</h1>     
+
+            
         </div>
        
     )
