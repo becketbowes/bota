@@ -1,0 +1,26 @@
+Frontend points of request for server:
+
+onload:
+about page request: vibeImage
+about page request: vibeText
+vibe page request: vibeTexts
+vibe page request: vibeImages
+
+shop:
+products, inventory
+
+febe:
+view all products (with inventory)
+view all receipts with total sales, total sales in last month, total sales in last year
+add a product
+update a product
+remove a product
+
+update vibeImage
+update vibeText
+
+view all admins
+add an admin
+edit an admin
+remove an admin
+
