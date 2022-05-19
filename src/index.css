@@ -72,16 +72,21 @@ h5 {
 
 /* links */
 .navmenu {
+  position: fixed;
+  right: 5%;
+  z-index: 11;
   text-align: right;
   margin-top: 88px;
   margin-right: 5%;
   margin-left: 5%;
-  background-color: var(--mellow);
-  opacity: .2;
+  background-color: transparent;
+  opacity: .8;
 }
 
 .link {
   color: var(--strong);
+  font-weight: 500;
+  font-size: xx-large;
   margin: 1px;
   padding: 25px;
   opacity: 1;

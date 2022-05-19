@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Nav({ currentPage, handlePageChange }) {
+function Nav({ currentPage, handlePageChange, nav }) {
+  if (!nav) {
+    return null
+  }
   return (
-  
-   
       <div className='navmenu'>
-  
         <ul>
           <li className="link">
             <span href='#About' onClick={() => handlePageChange('About')}
