@@ -2,11 +2,13 @@ import React from 'react';
 import Product from '../../assets/img/P1000210.jpg';
 
 {/* Make this a modal */}
-function About () {
 
+function AboutModal() {
     return (
-        <section>
-            <h2>Studio</h2>
+        <>
+            {/*return main page if close out*/}
+            {/*but if on click...*/}
+            
             <h3> Bota IS CIRCULAR COSMETICS FOR BODY & PLANET HEALTH</h3>
             <h4>INFORMED BY ANCESTRAL KNOWLEDGE, OUR FORMULAS ARE CREATED WITH METICULOUS ATTENTION TO EVERY DETAIL - EFFICACY, BEAUTY, AND SENSORY PLEASURE.</h4>
             <img src={Product} alt="product-shot"/>
@@ -22,10 +24,9 @@ function About () {
 
             <h6>03 PACKAGE</h6>
             <p>Bota vessels are architecture & landscape. All elements of bota are 'of the land'. Contents, vessel, and packaging.</p>
-        </section>
+        </>
         
     )
+}
 
-};
-
-export default About;
+export default AboutModal;

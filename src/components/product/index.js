@@ -20,10 +20,10 @@ function Product () {
                 Add to Cart
             </div>
             </div>
-           
+        
 
         </div>
-       
+    
     )
 };
 

@@ -34,7 +34,7 @@ function Nav({ currentPage, handlePageChange, nav }) {
               </span>
           </li>
         </ul>
-   
+  
 
       </div>
   
