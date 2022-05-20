@@ -6,19 +6,19 @@ const adminSchema = new Schema(
     {
         username: {
             type: String,
-            require: true,
+            required: true,
             unique: true,
             trim: true
         },
         email: {
             type: String,
-            require: true,
+            required: true,
             unique: true,
             match: [/.+@.+\..+/, 'Must match an email address!']
         },
         password: {
             type: String,
-            require: true,
+            required: true,
             minlength: 10
         }
     }
