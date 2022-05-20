@@ -201,3 +201,30 @@ right: 50%;
   text-align: center;
  
 }
+
+
+/* Contact form styling  */
+
+.contact-item {
+  border: 1px solid var(--front);
+  box-shadow: 0 0 .25rem var(--front);
+  width: 40%;
+  text-align: center;
+  padding: 10px;
+  word-spacing: 10px;
+  line-height: 40px;
+  margin: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.name {
+  margin: 10px;
+  justify-content: left;
+}
+.name-section {
+  
+}
+.input-box {
+  justify-content: right;
+}
