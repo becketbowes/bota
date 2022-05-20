@@ -11,6 +11,17 @@ function Toenav({ toenav }) {
                 Contact
               </span>
           </li>
+          <li>
+            <span href='#FAQ' onClick={() => handlePageChange('FAQ')}
+            className={currentPage === 'FAQ' ? 'nav-link active' : 'nav-link'}> 
+                FAQ
+            </span>
+          </li>
+          <li>
+            <span href='https://github.com/becketbowes/bota'>
+              &copy; Group2Designs 
+            </span>
+          </li>
         </ul>
       </div>
   );

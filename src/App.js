@@ -8,6 +8,7 @@ import About from './components/about/index';
 import Shop from './components/shop/index';
 import Gift from './components/gift/index';
 import Contact from './components/contact/index';
+import FAQ from './components/FAQ/index';
 import Toe from './components/toe'
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
       }
       if (currentPage === 'Product') {
         return <Product />;
+      }
+      if (currentPage === 'FAQ') {
+        return <FAQ />
       }
       //please remove this and the following three lines before going to production. They are unprofessional and embarassing, but they prevent the yellow warning label in dev.
       if (currentPage === 'nobody asked, Harold') {
