@@ -7,6 +7,7 @@ import Shop from '../shop/index';
 import Gift from '../gift/index';
 import Contact from '../contact/index';
 import Product from '../product/index';
+import Home from '../home/index';
 
 
 function Head() {
@@ -37,10 +38,13 @@ function Head() {
         if (currentPage === 'Gift') {
           return <Gift />;
         }
+        if (currentPage === 'Contact') {
+          return <Contact />;
+        }
         // if (currentPage === 'Contact') {
         //   return <Contact />;
         // }
-        return < Contact/>;
+        return < Home/>;
       };
     
     return (
