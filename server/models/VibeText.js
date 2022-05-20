@@ -3,7 +3,14 @@ const { Schema, model } = mongoose;
 
 const vibeTextSchema = new Schema(
     {
-
+        pageId: {
+            type: String,
+            required: true
+        },
+        text: {
+            type: String,
+            required: true
+        }
     }
 );
 
