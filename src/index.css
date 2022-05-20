@@ -200,4 +200,83 @@ right: 50%;
   position: relative;
   text-align: center;
  
+<<<<<<< Updated upstream
 }
+=======
+}
+.product-description {
+  margin: 50px;
+  padding: 30px;
+  word-spacing: 10px;
+  line-height: 70px;
+  font-size: 100px;
+  margin-right: 30px;
+  /* position: relative; */
+  /* bottom: 8px;
+  right: 16px; */
+  background: transparent;
+  color: var(--front);
+}
+.addtocart{
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/* Contact form styling  */
+
+.contact-item {
+  border: 1px solid var(--front);
+  box-shadow: 0 0 .25rem var(--front);
+  width: 40%;
+  text-align: center;
+  padding: 10px;
+  word-spacing: 10px;
+  line-height: 40px;
+  margin: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.name {
+  margin: 10px;
+  justify-content: left;
+}
+.name-section {
+  
+}
+.input-box {
+  justify-content: right;
+}
+
+/* About Page */
+.product-header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.about-logo {
+  width: 100px
+}
+
+.product-shot {
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-float-left {
+  float: left;
+  font-size: 30px;
+  text-align: left;
+}
+
+.product-float-right {
+  font-size: 15px;
+  margin-left: 15px;
+  text-align: right;
+  font-weight: 400;
+  line-height: 1.6;
+}
+>>>>>>> Stashed changes
