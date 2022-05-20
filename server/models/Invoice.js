@@ -27,6 +27,11 @@ const invoiceSchema = new Schema(
             require: true,
             default: 0
         }
+    },
+    {
+        toJSON: {
+          getters: true
+        }
     }
 );
 

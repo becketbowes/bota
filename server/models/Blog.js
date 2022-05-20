@@ -16,6 +16,11 @@ const blogSchema = new Schema (
             default: Date.now,
             get: (createdAtVal => dateFormat(createdAtVal))
         }
+    },
+    {
+        toJSON: {
+          getters: true
+        }
     }
 )
 
