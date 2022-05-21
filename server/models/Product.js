@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
-const inventorySchema = require('./Inventory')
 
 const productSchema = new Schema(
     {
@@ -10,7 +9,8 @@ const productSchema = new Schema(
         },
         name: {
             type: String,
-            required: true
+            required: true,
+            trim: true
         },
         description: {
             type: String,
@@ -18,7 +18,8 @@ const productSchema = new Schema(
         },
         usdPrice: {
             type: Number,
-            required: true
+            required: true,
+            min: 0.99
         },
         image: {
             type: String,
@@ -28,7 +29,11 @@ const productSchema = new Schema(
             type: String,
             required: true
         },
-        quantity: [inventorySchema]
+        quantity: {
+            type: Number,
+            min: 0,
+            default: 0
+        }
     }
 );
 
