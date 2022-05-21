@@ -221,7 +221,6 @@ right: 50%;
   text-align: center;
   margin: 20px;
   line-height: 20px;
- 
 }
 .product-description {
   margin: 50px;
@@ -266,4 +265,35 @@ right: 50%;
 }
 .input-box {
   justify-content: right;
+}
+
+/* About Page */
+.product-header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.about-logo {
+  width: 100px
+}
+
+.product-shot {
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-float-left {
+  float: left;
+  font-size: 30px;
+  text-align: left;
+}
+
+.product-float-right {
+  font-size: 15px;
+  margin-left: 15px;
+  text-align: right;
+  font-weight: 400;
+  line-height: 1.6;
 }
