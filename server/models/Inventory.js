@@ -1,18 +1,12 @@
-const mongoose = require("mongoose");
-const { Schema, model } = mongoose;
+const { Schema } = require('mongoose');
 
 const inventorySchema = new Schema(
     {
-        product: {
-
-        },
         quantity: {
             type: Number,
-            require: true
+            default: 0
         }
     }
-);
+)
 
-const Inventory = model("Inventory", inventorySchema);
-
-module.exports = Inventory;
+module.exports = inventorySchema;

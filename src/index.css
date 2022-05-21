@@ -162,6 +162,11 @@ right: 50%;
 }
 
 /* Product page style begins  */
+@media screen and (max-width: 1450px) {
+.product-name2{
+  color: var(--front)
+  }
+}
 .product{
   font-family: 'Josefin Sans', sans-serif;
   /* background-color: var(--back); */
@@ -185,7 +190,7 @@ right: 50%;
   width: 20%;
 
 }
-.product-name {
+.product-name1 {
   margin: 50px;
   padding: 30px;
   word-spacing: 10px;
@@ -195,14 +200,27 @@ right: 50%;
   position: absolute;
   bottom: 8px;
   right: 16px;
+  background: transparent;
+  color: var(--back);
+}
+.product-name2 {
+  margin: 50px;
+  padding: 30px;
+  word-spacing: 10px;
+  line-height: 70px;
+  font-size: 100px;
+  margin-right: 30px;
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  background: transparent;
+  color: var(--front);
 }
 .product-item {
   position: relative;
   text-align: center;
- 
-<<<<<<< Updated upstream
-}
-=======
+  margin: 20px;
+  line-height: 20px;
 }
 .product-description {
   margin: 50px;
@@ -279,4 +297,3 @@ right: 50%;
   font-weight: 400;
   line-height: 1.6;
 }
->>>>>>> Stashed changes

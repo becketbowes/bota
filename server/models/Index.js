@@ -1,8 +1,10 @@
 const Admin = require("./Admin");
-const Inventory = require("./Inventory");
+const Blog = require('./Blog')
 const Invoice = require("./Invoice");
 const Product = require("./Product");
 const VibeImage = require("./VibeImage");
 const VibeText = require("./VibeText");
+const Note = require("./Note");
 
-module.exports = { Admin, Inventory, Invoice, Product, VibeImage, VibeText };
+module.exports = { Admin, Blog, Invoice, Note, Product, VibeImage, VibeText };
+
