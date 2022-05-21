@@ -1,5 +1,7 @@
 import React from 'react';
 
+//const handlePageChange = (page) => setCurrentPage(page);
+
 function Toenav({ toenav }) {
   if (!toenav) {
     return null
@@ -17,6 +19,12 @@ function Toenav({ toenav }) {
             <span href='#FAQ' onClick={() => handlePageChange('FAQ')}
             className={currentPage === 'FAQ' ? 'nav-link active' : 'nav-link'}> 
                 FAQ
+            </span>
+          </li>
+          <li>
+            <span href='#Privacy' onClick={() => handlePageChange('Privacy')}
+            className={currentPage === 'Privacy' ? 'nav-link active' : 'nav-link'}> 
+                Privacy Policy
             </span>
           </li>
           <li>
