@@ -39,9 +39,12 @@ const typeDefs = gql `
         quantity: Int
     }
 
-    type Auth {
-        token: ID
-        user: User
+    type User {
+        _id: ID
+        firstName: String
+        lastName: String
+        email: String
+        invoices: [Invoice]
     }
 
     type VibeImage {
@@ -58,13 +61,18 @@ const typeDefs = gql `
         text: String
     }
 
+    type Auth {
+        token: ID
+        user: User
+    }
+
     type Query {
         admin: Admin
         blogs(title: String): [Blog]
         invoice(_id: ID!): Invoice
         notes(read: false): [Note]
         products(name: String): [Product]
-        product(_id: ID): Product
+        product(_id: ID!): Product
         user: User
         vibeImage(_id: ID): VibeImage
         vibeText(_id:ID): VibeText
