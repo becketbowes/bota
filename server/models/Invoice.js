@@ -14,11 +14,6 @@ const invoiceSchema = new Schema(
             type: Date,
             default: Date.now,
             get: (createdAtVal => dateFormat(createdAtVal))
-        },
-        total: {
-            type: Number,
-            require: true,
-            default: 0
         }
     },
     {

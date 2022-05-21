@@ -9,10 +9,10 @@ const vibeImageSchema = new Schema(
         link: {
             type: String
         },
-        images: {
+        image: {
             type: String
         },
-        alt: {
+        imageAlt: {
             type: String
         }
     }

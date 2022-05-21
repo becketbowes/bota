@@ -4,6 +4,10 @@ const dateFormat = require('../utils/dateFormat')
 
 const blogSchema = new Schema (
     {
+        title: {
+            type: String,
+            required: true
+        },
         text: {
             type: String,
             required: true
