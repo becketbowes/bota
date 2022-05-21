@@ -27,7 +27,6 @@ function Admin() {
             <button type='button' className='adminubutton' onClick={neverSubmit}>•••  Post  •••</button>
             <h1>Shop</h1>
             <button type='button' className='adminubutton' onClick={neverSubmit}>•••View Products•••</button>
-            <button type='button' className='adminubutton' onClick={neverSubmit}>•••View Inventory•••</button>
             <button type='button' className='adminubutton' onClick={neverSubmit}>•••View Receipts•••</button>
             <button type='button' className='adminubutton' onClick={neverSubmit}>•••Add A Product•••</button>
             <button type='button' className='adminubutton' onClick={neverSubmit}>•••Update a Product•••</button>
