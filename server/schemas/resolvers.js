@@ -17,7 +17,7 @@ const resolvers = {
             if(context.user) {
                 const user = await User.findById(context.user._id)
                 .populate({
-                    path: 'invoices.items'
+                    path: 'invoices.products'
                 })
 
                 return user.invoices.id(_id);
@@ -43,7 +43,7 @@ const resolvers = {
             if (context.user) {
                 const user = await User.findById(context.user._id)
                     .populate ({
-                        path: 'invoices.items'
+                        path: 'invoices.products'
                     });
                 
                 user.invoices.sort((a, b) => b.purchaseDate - a.purchaseDate)
@@ -81,11 +81,11 @@ const resolvers = {
             
             return blog;
         },
-        addInvoice: async (parent, { items }, context) => {
+        addInvoice: async (parent, { products }, context) => {
             console.log(context);
 
             if (context.user) {
-                const invoice = new Invoice({ items }); 
+                const invoice = new Invoice({ products }); 
 
                 await User.findByIdAndUpdate(context.user._id, { $push: { invoices: invoice }})
 

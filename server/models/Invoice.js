@@ -4,7 +4,7 @@ const dateFormat = require('../utils/dateFormat')
 
 const invoiceSchema = new Schema(
     {
-        items: [
+        products: [
             {
                 type: Schema.Types.ObjectId,
                 ref: 'Product'
