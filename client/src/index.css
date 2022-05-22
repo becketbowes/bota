@@ -29,8 +29,8 @@
 }
 
 h1 {
-  /* font-weight: 500;
-  font-size: large; */
+  font-weight: 500;
+  font-size: large;
 }
 
 h2 {
@@ -101,23 +101,79 @@ h5 {
 }
 
 .adminuItem {
+  background-color: var(--mellow);
   width: 80%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   margin-right: 10%;
   margin-left: 10%
 }
 
+.adminuTitle {
+  background-color: inherit;
+  font-size: large;
+  font-weight: 500;
+}
+
+.adminuSmalltext {
+  background-color: inherit;
+  font-weight: 300;
+}
+
+.adminuMeta {
+  font-size: small;
+  font-weight: 300;
+  background-color: inherit;
+}
+
+input {
+  width: 80%;
+  height: 80px;
+  background-color: white;
+  padding: 11px;
+  margin: 5px;
+  text-align: left;
+  border: none;
+  resize: none;
+}
+
+.adminuText {
+  width: 80%;
+  height: 80px;
+  background-color: white;
+  padding: 11px;
+  margin: 5px;
+  text-align: left;
+  border: none;
+  resize: none;
+}
+
+.adminuSpace {
+  background-color: inherit;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .adminubutton {
   color: var(--strong);
+  background-color: inherit;
   width: 80%;
   font-weight: 500;
   border: none;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top:25px;
+  margin-bottom: 25px;
   margin-right: 10%;
   margin-left: 10%
 }
+
+.adminuHide {
+  display: none;
+}
+
+.adminuShow {
+  display: auto;
+}
+
 
 /* footer styles */
 .toes {
@@ -256,13 +312,12 @@ right: 50%;
   margin-right: auto;
   
 }
+
 .name {
   margin: 10px;
   justify-content: left;
 }
-.name-section {
-  
-}
+
 .input-box {
   justify-content: right;
 }

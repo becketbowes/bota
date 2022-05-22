@@ -1,5 +1,7 @@
 
 import Head from './components/head/index';
+import Toe from './components/toe';
+import Admin from './components/admin';
 // import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 // import { setContext } from '@apollo/client/link/context';
 
@@ -26,6 +28,9 @@ function App() {
       <>
       {/* <ApolloProvider client={client}> */}
           <Head></Head>
+          <Admin></Admin>
+          {/* <Modify></Modify> */}
+          <Toe></Toe>
       {/* </ApolloProvider> */}
       </>
     );
