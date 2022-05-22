@@ -126,6 +126,17 @@ h5 {
   background-color: inherit;
 }
 
+input {
+  width: 80%;
+  height: 80px;
+  background-color: white;
+  padding: 11px;
+  margin: 5px;
+  text-align: left;
+  border: none;
+  resize: none;
+}
+
 .adminuText {
   width: 80%;
   height: 80px;

@@ -28,7 +28,6 @@ function ViewProducts() {
             quantity: 7524
         }
     ];
-
     
     return (
         <>

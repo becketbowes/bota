@@ -1,7 +1,9 @@
-function RemoveAdmins({handleContent}) {
+function RemoveAdmins(id) {
+    const removeAdmin = (id) => { alert(`admin ${id} is nobody to us!!!`)}
+
     return (
         <>
-            <h1 onClick={() => handleContent('adminu')}>••• Main Adminu •••</h1>
+            <button className="adminubutton" onClick={() => removeAdmin(id)}>••! remove {id}? !••</button>
         </>
     )
 }

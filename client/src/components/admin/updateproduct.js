@@ -1,6 +1,7 @@
-function UpdateProduct() {
+function UpdateProduct({id}) {
     // replace with get product by id call from betwixt the parentheses in main function, coming from viewproducts page
     const product = {
+        id: id,
         title: "lipstick",
         image: "lipstick.jpg",
         imageAlt: "a picture of our lipstick",
@@ -19,6 +20,7 @@ function UpdateProduct() {
                 <textarea className="adminuText" defaultValue={product.imageAlt}></textarea>
                 <textarea className="adminuText" defaultValue={product.cost}></textarea>
                 <textarea className="adminuText" defaultValue={product.description}></textarea>
+                <textarea className="adminuText" defaultValue={product.id}></textarea>
                 <button className="adminubutton">••• Update Product •••</button>
             </article>
         </>

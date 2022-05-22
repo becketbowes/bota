@@ -1,5 +1,5 @@
 function RemoveProduct({id}) {
-    const removeItem = (id) => { console.alert(`item ${id} has been wiped from the face of the earth!!!`)}
+    const removeItem = (id) => { alert(`item ${id} has been wiped from the face of the earth!!!`)}
 
     return (
         <>
