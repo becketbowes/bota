@@ -13,7 +13,8 @@ const blogSchema = new Schema (
             required: true
         },
         image: {
-            type: String
+            type: String,
+            required: false
         },
         date: {
             type: Date,

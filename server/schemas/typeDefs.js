@@ -11,7 +11,7 @@ const typeDefs = gql `
 
     type Invoice {
         _id: ID
-        items: [Product]
+        products: [Product]
         purchaseDate: String 
     }
 
@@ -62,6 +62,10 @@ const typeDefs = gql `
         user: User
     }
 
+    type Checkout {
+        session: ID
+    }
+
     type Query {
         blogs(title: String): [Blog]
         invoice(_id: ID!): Invoice
@@ -72,15 +76,16 @@ const typeDefs = gql `
         users: [User]
         vibeImage(_id: ID): VibeImage
         vibeText(_id:ID): VibeText
+        checkout(products: [ID]!): Checkout
     }
 
     type Mutation {
         addBlog(title: String!, text: String!, image: String!): Blog
-        addInvoice(items: [ID]!): Invoice
+        addInvoice(products: [ID]!): Invoice
         addNote(email: String!, text: String!, read: Boolean!): Note
         addProduct(sku: String!, name: String!, description: String!, usdPrice: Float!, image: String!, imageAlt: String!, quantity: String!): Product
         updateProduct(_id: ID!, quantity: Int!): Product
-        addUser(firstName: String!, lastName: String!, email: String!, password: String!, admin: Boolean!): Auth
+        addUser(firstName: String!, lastName: String!, email: String!, password: String!, admin: Boolean): Auth
         updateUser(firstName: String, lastName: String, email: String, password: String, admin: Boolean): User
         addVibeImage(pageId: String!, link: String!, image: String!, imageAlt: String!): VibeImage
         addVibeText(pageId: String!, text: String!): VibeText
