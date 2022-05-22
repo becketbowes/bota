@@ -298,7 +298,9 @@ right: 50%;
   line-height: 1.6;
 }
 
-/* Homepage slideshow */
+.successful-purchase {
+  text-align: center;
+}
 
 .container {
   overflow: hidden;
