@@ -62,6 +62,10 @@ const typeDefs = gql `
         user: User
     }
 
+    type Checkout {
+        session: ID
+    }
+
     type Query {
         blogs(title: String): [Blog]
         invoice(_id: ID!): Invoice
@@ -72,6 +76,7 @@ const typeDefs = gql `
         users: [User]
         vibeImage(_id: ID): VibeImage
         vibeText(_id:ID): VibeText
+        checkout(products: [ID]!): Checkout
     }
 
     type Mutation {

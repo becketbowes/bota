@@ -1,6 +1,8 @@
 const { AuthenticationError } = require('apollo-server-express');;
 const { Product, User, Note, Blog, Invoice, VibeText, VibeImage } = require('../models');
 const { signToken } = require('../utils/auth');
+//second parentheses is the test key. Once a real Stripe account is created, replace this with an environment variable, i.e. process.env.STRIPE_KEY
+const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc')
 
 const resolvers = {
     Query: {
@@ -72,9 +74,47 @@ const resolvers = {
             }
 
             return await VibeText.findById(_id)
-        }
+        },
+        checkout: async(parent, args, context) => {
+            const invoice = new Invoice({ products: args.products })
+            
+            const { products } = await invoice.populate('products');
+            const line_items = [];
+
+            for (let i = 0; i < products.length; i++) {
+                // generate product id
+                const product = await stripe.products.create({
+                    name: products[i].name,
+                    description: products[i].description
+                });
+              
+                // generate price id using the product id
+                const price = await stripe.prices.create({
+                    product: product.id,
+                    //multiple by 100 because Stripe stores prices in cents, not dollars
+                    unit_amount: products[i].usdPrice * 100,
+                    currency: 'usd',
+                });
+              
+                // add price id to the line items array
+                line_items.push({
+                    price: price.id,
+                    quantity: 1
+                });
+            }
+
+            //this will use the line_items array to generate a Stripe checkout session. The checkout session ID is the only data the resolver needs, so it's returned.
+            const session = await stripe.checkout.sessions.create({
+                payment_method_types: ['card'],
+                line_items,
+                mode: 'payment',
+                success_url: 'https://example.com/success?session_id={CHECKOUT_SESSION_ID}',
+                cancel_url: 'https://example.com/cancel'
+              });
+              
+              return { session: session.id };
+        },
     },
-    //checkout needed
     Mutation: {
         addBlog: async (parent, args) => {
             const blog = await Blog.create(args);
