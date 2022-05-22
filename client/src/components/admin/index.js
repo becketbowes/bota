@@ -1,47 +1,48 @@
 import { useState } from 'react';
+import Adminu from './adminu';
+import Messages from './messages';
+import Blog from './blog';
+import ViewProducts from './viewproducts';
+import ViewReceipts from './viewreceipts';
+import AddProduct from './addproduct';
+import UpdateProduct from './updateproduct';
+import RemoveProduct from './removeproduct';
+import Theme from './theme';
+import EditAbout from './editabout';
+import EditVibe from './editvibe';
+import ViewAdmins from './viewadmins';
+import AddAdmins from './addadmins';
+import EditAdmins from './editadmins';
+import RemoveAdmins from './removeadmins';
 
 function Admin() {
-    const [text, setText] = useState('');
+    const [content, setContent] = useState('adminu');
+    const handleContent = (c) => setContent(c);
+    
 
-    // const inputHandle = (e) => {
-    //     const { target } = e;
-    //     const inputType = target.name;
-    //     const inputValue = target.value;
-
-    //     if (inputType === 'text') {
-    //         setText(inputValue);
-    //     }
-    // }
-
-    const neverSubmit = (e) => {
-        e.preventDefault();
-        //route here using text value, change alert below
-        alert(text);
-        setText('');
-    };
+    const adminuDisplay = () => {
+        if (content === 'messages') { return <Messages /> }
+        if (content === 'blog') { return <Blog /> }
+        if (content === 'viewproducts') { return <ViewProducts /> }
+        if (content === 'viewreceipts') { return <ViewReceipts /> }
+        if (content === 'addproduct') { return <AddProduct /> }
+        if (content === 'updateproduct') { return <UpdateProduct /> }
+        if (content === 'removeproduct') { return <RemoveProduct /> }
+        if (content === 'theme') { return <Theme /> }
+        if (content === 'editabout') { return <EditAbout /> }
+        if (content === 'editvibe') { return <EditVibe /> }
+        if (content === 'viewadmins') { return <ViewAdmins /> }
+        if (content === 'addadmins') { return <AddAdmins /> }
+        if (content === 'editadmins') { return <EditAdmins /> }
+        if (content === 'removeadmins') { return <RemoveAdmins /> }
+    }
 
     return (
-        <navigation className='adminupop'>
-            <h1>Social</h1>
-            <button type='button' className='adminubutton' onClick={neverSubmit}>•••15 Messages!•••</button>
-            <button type='button' className='adminubutton' onClick={neverSubmit}>•••  Post  •••</button>
-            <h1>Shop</h1>
-            <button type='button' className='adminubutton' onClick={neverSubmit}>•••View Products•••</button>
-            <button type='button' className='adminubutton' onClick={neverSubmit}>•••View Receipts•••</button>
-            <button type='button' className='adminubutton' onClick={neverSubmit}>•••Add A Product•••</button>
-            <button type='button' className='adminubutton' onClick={neverSubmit}>•••Update a Product•••</button>
-            <button type='button' className='adminubutton' onClick={neverSubmit}>•••Remove a Product•••</button>
-            <h1>Vibe</h1>
-            <button type='button' className='adminubutton' onClick={neverSubmit}>•••Toggle the Theme•••</button>
-            <button type='button' className='adminubutton' onClick={neverSubmit}>•••Edit About Page•••</button>
-            <button type='button' className='adminubutton' onClick={neverSubmit}>•••Edit the Vibe•••</button>
-            <h1>Peeps</h1>
-            <button type='button' className='adminubutton' onClick={neverSubmit}>•••View Admins•••</button>
-            <button type='button' className='adminubutton' onClick={neverSubmit}>•••Add Admins•••</button>
-            <button type='button' className='adminubutton' onClick={neverSubmit}>•••Edit Admins•••</button>
-            <button type='button' className='adminubutton' onClick={neverSubmit}>•••Remove Admins•••</button>
-            <br></br><br></br>
-        </navigation>
+        <section className='adminupop'>
+            <Adminu content={content} handleContent={handleContent} />
+            {adminuDisplay()}
+            <button className="adminubutton" onClick={() => handleContent('adminu')}>••• logout •••</button>
+        </section>
     );
 }
 
