@@ -1,7 +1,5 @@
 
 import Head from './components/head/index';
-//need to fix Toe
-//import Toe from './components/toe/toenav';
 // import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 // import { setContext } from '@apollo/client/link/context';
 
@@ -28,7 +26,6 @@ function App() {
       <>
       {/* <ApolloProvider client={client}> */}
           <Head></Head>
-          {/*<Toe></Toe>*/}
       {/* </ApolloProvider> */}
       </>
     );
