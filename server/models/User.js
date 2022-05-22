@@ -18,14 +18,20 @@ const userSchema = new Schema({
     email: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        match: [/.+@.+\..+/, 'Must match an email address!']
     },
     password: {
         type: String,
         required: true,
         minlength: 5
     },
-    invoices: [Invoice.schema]
+    invoices: [Invoice.schema], 
+    admin: {
+        type: Boolean,
+        required: true,
+        // default: false
+    }
 });
 
 // set up pre-save middleware to create password
