@@ -3,48 +3,53 @@ import React from 'react';
 function FAQ () {
 
     return (
-        <div className="faq">
-            <div className="faq-title">
+        <div className="dropdown">
                 <h1>Frequently Asked Questions</h1>
-            </div>
+            {/*Section 1 */}
             <div className="faq-section"> 
-                <h3>
+                <button className="dropbtn">
                     Sustainability
-                </h3>
+                </button>
             </div>
-            <div className ="faq-question">
+            <div className="dropdown-content">
                 <h6>
                     Where do you source your ingredients from?
                 </h6>
-            </div>
-            <div className="faq-answer">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 </p>
             </div>
+            {/*Section 2 */}
             <div className="faq-section"> 
-                <h3>
+                <button className="dropbtn">
                     Shipping
-                </h3>
+                </button>
             </div>
-            <div className ="faq-question">
+            <div className="dropdown-content">
                 <h6>
                     Is there a way to track my order?
                 </h6>
-            </div>
-            <div className="faq-answer">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 </p>
-            </div>
-            <div className ="faq-question">
                 <h6>
                     Do you offer refunds?
                 </h6>
-            </div>
-            <div className="faq-answer">
                 <p>
                     Bota is not able to offer refunds at this time.
+                </p>
+            </div>
+            <div className="faq-section"> 
+                <button className="dropbtn">
+                    Subscription
+                </button>
+            </div>
+            <div className="dropdown-content">
+                <h6>
+                    How often will I recieve a refill under my Bota subscription?
+                </h6>
+                <p>
+                    Under the Bota subscription, you will receive a body butter refill every 3 months.
                 </p>
             </div>
         </div>
