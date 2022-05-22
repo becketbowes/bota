@@ -5,15 +5,15 @@ const { Schema } = mongoose;
 
 const noteSchema = new Schema(
   {
-    writerName: {
-      type: String,
-      require: true,
-    },
     email: {
       type: String,
       required: true,
       unique: true,
       match: [/.+@.+\..+/, "Must match an email address!"],
+    },
+    text: {
+      type: String,
+      require: true,
     },
     createdAt: {
       type: Date,
@@ -22,6 +22,7 @@ const noteSchema = new Schema(
     },
     read: {
       type: Boolean,
+      default: false
     },
   },
   {

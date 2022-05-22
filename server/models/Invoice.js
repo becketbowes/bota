@@ -6,26 +6,14 @@ const invoiceSchema = new Schema(
     {
         items: [
             {
-                productId: {
-                    type: String
-                },
-                name: String,
-                quantity: {
-                    type: Number,
-                    required: true,
-                    min: [1, 'Quantity cannot be less than 1!']
-                }
+                type: Schema.Types.ObjectId,
+                ref: 'Product'
             }
         ],
-        date: {
+        purchaseDate: {
             type: Date,
             default: Date.now,
             get: (createdAtVal => dateFormat(createdAtVal))
-        },
-        total: {
-            type: Number,
-            require: true,
-            default: 0
         }
     },
     {
