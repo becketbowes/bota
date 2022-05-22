@@ -19,7 +19,6 @@ function Admin() {
     const [content, setContent] = useState('adminu');
     const handleContent = (c) => setContent(c);
     
-
     const adminuDisplay = () => {
         if (content === 'messages') { return <Messages /> }
         if (content === 'blog') { return <Blog /> }

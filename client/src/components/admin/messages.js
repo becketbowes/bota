@@ -7,7 +7,7 @@ function Messages() {
 
     return (
         <>
-            {getMessages.map((message) => (
+            {getMessages.length && getMessages.map((message) => (
                 <article className="adminuItem">
                     <div className="adminuTitle">{message.title}</div>
                     <span className="adminuMeta">{message.createdAt}</span>

@@ -1,20 +1,11 @@
-import UpdateProduct from './updateproduct';
-import RemoveProduct from './removeproduct';
+import { useState } from 'react';
+import UpdateProduct from "./updateproduct";
+import RemoveProduct from "./removeproduct";
 
 function ViewProducts() {
-    const editDisplay = (editType, id) => {
-        console.log(editType, id);
-        if (editType === "delete") {
-            return <RemoveProduct id={id} />
-        }
-        if (editType === "update") {
-            return <UpdateProduct id={id} />
-        } else {
-            return;
-        };
-    };
+    const [edit, setEdit] = useState(false);
+    const [remove, setRemove] = useState(false);
 
-    // replace with route:
     const products = [
         {
             _id: "5899384yd",
@@ -38,25 +29,24 @@ function ViewProducts() {
         }
     ];
 
+    
     return (
         <>
-            <div>
-                {editDisplay() && (
-                    <div>{editDisplay}</div>
-                )}
-            </div>
             {products.map((product) => (
                 <article className="adminuItem">
                     <div className="adminuSpace">•••</div>
-                    <div className="adminuTitle" value="Product Title">{product.name}</div>
-                    <div className="adminuSmalltext" value="Product SKU">{product.sku}</div>
-                    <div className="adminuSmalltext" value="Product Description">{product.description}</div>
-                    <div className="adminuSmalltext" value="Product Inventory">available units: {product.quantity}</div>
-                    <div className="adminuSmalltext" value="Product Cost">price per unit in cents: {product.usdPrice}</div>
-                    <button className="adminubutton" id={product._id} onClick={() => editDisplay("update", product._id)}>••• Edit Product •••</button>
-                    <button className="adminubutton" id={product._id} onClick={() => editDisplay("delete", product._id)}>••• Delete Product •••</button>
+                    <div className="adminuTitle" key={product.name} value="Product Title">{product.name}</div>
+                    <div className="adminuSmalltext" key={product.sku} value="Product SKU">{product.sku}</div>
+                    <div className="adminuSmalltext" key={product.description} value="Product Description">{product.description}</div>
+                    <div className="adminuSmalltext" key={product.quantity} value="Product Inventory">available units: {product.quantity}</div>
+                    <div className="adminuSmalltext" key={product.usdPrice} value="Product Cost">price per unit in cents: {product.usdPrice}</div>
+                    <button className="adminubutton" key="edit" id={product._id} onClick={() => setEdit(!edit)}>••• Edit Products •••</button>
+                    <button className="adminubutton" key="delete" id={product._id} onClick={() => setRemove(!remove)}>••• Delete Products •••</button>
+                    { edit? <UpdateProduct id={product._id} /> : null }
+                    { remove? <RemoveProduct id={product._id} /> : null }
                 </article>
             ))}
+
         </>
     )
 }

@@ -3,7 +3,7 @@ import { useState } from 'react';
 function AddProduct() {
     const [name, setName] = useState('');
     const [sku, setSku] = useState('');
-    const [image, setImage] = useState('');
+    const [img, setImg] = useState('');
     const [imageAlt, setImageAlt] = useState('');
     const [description, setDescription] = useState('');
     const [quantity, setQuantity] = useState('');
@@ -17,8 +17,8 @@ function AddProduct() {
             setName(inputValue);
         } else if (inputType === 'sku') {
             setSku(inputValue);
-        } else if (inputType === 'image') {
-            setImage(inputValue);
+        } else if (inputType === 'img') {
+            setImg(inputValue);
         } else if (inputType === 'imageAlt') {
             setImageAlt(inputValue);
         } else if (inputType === 'description') {
@@ -38,7 +38,7 @@ function AddProduct() {
         alert(`new product: ${name} has been added to database`);
         setName('');
         setSku('');
-        setImage('');
+        setImg('');
         setImageAlt('');
         setDescription('');
         setQuantity('');
@@ -52,7 +52,7 @@ function AddProduct() {
                 <input value={name} name="name" onChange={inputHandle} type="name" className="adminuText" placeholder='Product Title' />
                 <input value={sku} name="sku" onChange={inputHandle} type="sku" className="adminuText" placeholder='Product SKU' />
                 {/* change to drag and drop */}
-                <input value={image} onChange={inputHandle} type="image" className="adminuText" placeholder='Drop Image Here' />
+                <input value={img} onChange={inputHandle} type="img" className="adminuText" placeholder='Drop Image Here' />
                 <input value={imageAlt} onChange={inputHandle} type="imageAlt" className="adminuText" placeholder='Alternative text for image for the visually impaired'/>
                 <input value={description} onChange={inputHandle} type="description" className="adminuText" placeholder='Product Description'/>
                 <input value={quantity} onChange={inputHandle} type="quantity" className="adminuText" placeholder='Product Inventory - please enter unit numbers in digits only'/>

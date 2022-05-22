@@ -155,6 +155,15 @@ h5 {
   margin-left: 10%
 }
 
+.adminuHide {
+  display: none;
+}
+
+.adminuShow {
+  display: auto;
+}
+
+
 /* footer styles */
 .toes {
 position:relative;
