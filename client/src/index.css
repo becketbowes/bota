@@ -298,6 +298,32 @@ right: 50%;
   line-height: 1.6;
 }
 
+/* Accordion FAQs */
+.dropbtn {
+  background-color: var(--back);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 .successful-purchase {
   text-align: center;
 }
