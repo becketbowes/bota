@@ -58,6 +58,8 @@ function Contact() {
     }
   };
 
+  const resetForm = () => { setFormState({ name: '', email: '', message: '' }); window.location.reload(true); alert('message sent!') };
+
   return (
     <>
       {login ?
@@ -86,7 +88,7 @@ function Contact() {
                   <p className="error-text">{errorMessage}</p>
                 </div>
               )}
-              <button data-testid="button" type="submit">SUBMIT</button>
+              <button data-testid="button" type="submit" onClick={resetForm}>SUBMIT</button>
             </form>
           </div>
         </section>}
