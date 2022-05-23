@@ -393,13 +393,14 @@ input {
 }
 
 .container {
+  margin-top: 15px;
   overflow: hidden;
 }
 
 .sliding-background {
-  background: url("./assets/img/botaAb5.jpg") repeat-x;
+  background: url("./assets/img/HomeSlides.jpg") repeat-x;
   height: 500px;
-  width: 5076px;
+  width: 3000px;
   animation: slide 60s linear infinite;
 }
 
