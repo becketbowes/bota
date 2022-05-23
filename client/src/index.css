@@ -166,6 +166,11 @@ input {
   margin-left: 10%
 }
 
+.adminufile {
+  align-content: center;
+  background: inherit;
+}
+
 .adminuHide {
   display: none;
 }

@@ -16,6 +16,7 @@ function Messages() {
                     <span className="adminuSpace">•••</span>
                 </article>
             ))}
+            <button className="adminubutton">••• See All Previous Messages •••</button>
         </>
     )
 }
