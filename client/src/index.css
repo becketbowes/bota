@@ -1,22 +1,25 @@
 /* thematic color variables */
 .bota-light {
-  --front:rgb(37,38,34);
-  --strong:rgb(148,67,13);
-  --mellow:rgb(200,172,134);
-  --back: rgb(241,244,227);
+  --front: rgb(37, 38, 34);
+  --strong: rgb(148, 67, 13);
+  --mellow: rgb(200, 172, 134);
+  --back: rgb(241, 244, 227);
 }
-.bota-dark {    
-  --front: rgb(241,244,227);
-  --strong:rgb(148,67,13);
-  --mellow:rgb(200,172,134);
-  --back:rgb(37,38,34);
+
+.bota-dark {
+  --front: rgb(241, 244, 227);
+  --strong: rgb(148, 67, 13);
+  --mellow: rgb(200, 172, 134);
+  --back: rgb(37, 38, 34);
 }
+
 .bota-strong {
-  --front:rgb(37,38,34);
-  --strong:rgb(200,172,134);
-  --mellow: rgb(241,244,227);
-  --back:rgb(148,67,13);
+  --front: rgb(37, 38, 34);
+  --strong: rgb(200, 172, 134);
+  --mellow: rgb(241, 244, 227);
+  --back: rgb(148, 67, 13);
 }
+
 /* general rules, setting theme */
 * {
   font-family: 'Josefin Sans', sans-serif;
@@ -94,7 +97,7 @@ h5 {
 
 /* admin */
 .adminupop {
-  width: 100%;  
+  width: 100%;
   align-content: center;
   align-items: center;
   text-align: center;
@@ -160,27 +163,26 @@ input {
   width: 80%;
   font-weight: 500;
   border: none;
-  margin-top:25px;
+  margin-top: 25px;
   margin-bottom: 25px;
   margin-right: 10%;
   margin-left: 10%
 }
 
-.adminuHide {
-  display: none;
-}
-
-.adminuShow {
-  display: auto;
+.adminufile {
+  align-content: center;
+  background: inherit;
 }
 
 
 /* footer styles */
 .toes {
-position:relative;
-bottom: 10px;
-left: 50%;
-right: 50%;
+  padding-top: 50px;
+  position: relative;
+  bottom: 10px;
+  left: 50%;
+  right: 50%;
+  background: transparent;
 
 }
 
@@ -195,7 +197,7 @@ right: 50%;
     font-weight: 500;
     font-size: xx-large;
   }
-  
+
   h2 {
     font-weight: 300;
     font-size: xx-large;
@@ -209,7 +211,7 @@ right: 50%;
     margin-right: 50%;
     margin-top: 20px;
   }
-  
+
   .botadot {
     width: 10%;
     margin-right: 5%;
@@ -219,17 +221,19 @@ right: 50%;
 
 /* Product page style begins  */
 @media screen and (max-width: 1450px) {
-.product-name2{
-  color: var(--front)
+  .product-name2 {
+    color: var(--front)
   }
 }
-.product{
+
+.product {
   font-family: 'Josefin Sans', sans-serif;
   /* background-color: var(--back); */
   color: var(--front);
   text-decoration: none;
   list-style-type: none;
 }
+
 .product-title {
   margin-left: 500px;
   align-content: center;
@@ -246,6 +250,7 @@ right: 50%;
   width: 20%;
 
 }
+
 .product-name1 {
   margin: 50px;
   padding: 30px;
@@ -259,6 +264,7 @@ right: 50%;
   background: transparent;
   color: var(--back);
 }
+
 .product-name2 {
   margin: 50px;
   padding: 30px;
@@ -272,12 +278,14 @@ right: 50%;
   background: transparent;
   color: var(--front);
 }
+
 .product-item {
   position: relative;
   text-align: center;
   margin: 20px;
   line-height: 20px;
 }
+
 .product-description {
   margin: 50px;
   padding: 30px;
@@ -291,7 +299,8 @@ right: 50%;
   background: transparent;
   color: var(--front);
 }
-.addtocart{
+
+.addtocart {
   margin-left: auto;
   margin-right: auto;
 
@@ -310,7 +319,7 @@ right: 50%;
   margin: 50px;
   margin-left: auto;
   margin-right: auto;
-  
+
 }
 
 .name {

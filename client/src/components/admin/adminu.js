@@ -17,10 +17,11 @@ function Adminu({content, handleContent}) {
                 <button type='button' className='adminubutton' id='viewproducts'>•••View • Edit • Remove • Products•••</button>
                 <button type='button' className='adminubutton' id='addproduct'>•••Add A Product•••</button>
                 <button type='button' className='adminubutton' id='viewreceipts'>•••View Receipts•••</button>
-                <h1>Vibe</h1>
+                {/* for future versions: */}
+                {/* <h1>Vibe</h1>
                 <button type='button' className='adminubutton' id='theme'>•••Toggle the Theme•••</button>
                 <button type='button' className='adminubutton' id='editabout'>•••Edit About Page•••</button>
-                <button type='button' className='adminubutton' id='editvibe'>•••Edit the Vibe•••</button>
+                <button type='button' className='adminubutton' id='editvibe'>•••Edit the Vibe•••</button> */}
                 <h1>Peeps</h1>
                 <button type='button' className='adminubutton' id='viewadmins'>•••View • Edit • Remove • Admins•••</button>
                 <button type='button' className='adminubutton' id='addadmins'>•••Add Admins•••</button>
@@ -30,22 +31,3 @@ function Adminu({content, handleContent}) {
 }
 
 export default Adminu;
-
-    // const [text, setText] = useState('');
-
-    // const inputHandle = (e) => {
-    //     const { target } = e;
-    //     const inputType = target.name;
-    //     const inputValue = target.value;
-
-    //     if (inputType === 'text') {
-    //         setText(inputValue);
-    //     }
-    // }
-
-    // const neverSubmit = (e) => {
-    //     e.preventDefault();
-    //     //route here using text value, change alert below
-    //     alert(text);
-    //     setText('');
-    // };
