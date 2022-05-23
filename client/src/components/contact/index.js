@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../utils/helpers';
 import Admin from '../admin';
+import {useMutation} from '@apollo/client'
+import { ADD_NOTE } from '../utils/mutations'
 
 function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
   const [errorMessage, setErrorMessage] = useState('');
   const { name, email, message } = formState;
+  const [addNote] = useMutation(ADD_NOTE)
 
   const [login, setLogin] = useState(false);
 
@@ -26,14 +29,24 @@ function Contact() {
   //   }
   // };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (formState.name === 'Fucking Nancy Botwin') {
       setLogin(!login)
     }
     if (!errorMessage) {
       console.log('Submit Form', formState);
+   
+      await addNote({
+        variables: {
+          name: formState.name,
+          email: formState.email,
+          message: formState.message
+        }
+      })
     }
+    
+    //reset the form
 
   };
 

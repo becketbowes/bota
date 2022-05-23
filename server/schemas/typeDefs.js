@@ -17,8 +17,9 @@ const typeDefs = gql `
 
     type Note {
         _id: ID
+        name: String
         email: String
-        text: String
+        message: String
         createdAt: String
         read: Boolean
     }
@@ -82,7 +83,7 @@ const typeDefs = gql `
     type Mutation {
         addBlog(title: String!, text: String!, image: String!): Blog
         addInvoice(products: [ID]!): Invoice
-        addNote(email: String!, text: String!, read: Boolean!): Note
+        addNote(name: String, email: String!, message: String!, read: Boolean): Note
         addProduct(sku: String!, name: String!, description: String!, usdPrice: Float!, image: String!, imageAlt: String!, quantity: String!): Product
         updateProduct(_id: ID!, quantity: Int!): Product
         addUser(firstName: String!, lastName: String!, email: String!, password: String!, admin: Boolean): Auth

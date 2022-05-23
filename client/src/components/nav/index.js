@@ -8,6 +8,12 @@ function Nav({ currentPage, handlePageChange, nav }) {
   return (
       <div className='navbarmain'>
         <ul>
+        <li className="link">
+            <span href='#Login' onClick={() => handlePageChange('Login')}
+              className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'}>
+                Login
+              </span>
+          </li>
           <li className="link">
             <span href='#About' onClick={() => handlePageChange('About')}
               className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}>

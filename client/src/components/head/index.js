@@ -9,6 +9,7 @@ import Contact from '../contact';
 import Product from '../product';
 import Home from '../home';
 import Admin from '../admin';
+import Login from '../Login'
 
 function Head() {
     const [nav, setNav] = useState(false);
@@ -25,7 +26,9 @@ function Head() {
     const handlePageChange = (page) => setCurrentPage(page);
   
     const renderPage = () => {
-      
+        if (currentPage === 'Login') {
+          return <Login />;
+        }
         if (currentPage === 'About') {
           return <About />;
         }
