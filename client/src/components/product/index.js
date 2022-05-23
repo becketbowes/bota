@@ -6,6 +6,14 @@ import productimage4 from '../../assets/img/P1000229.jpg'
 
 function Product () {
 
+    const handleSubmit= (e) => {
+        e.preventDefault();
+
+        console.log("You clicked me!")
+
+        
+    }
+
     return (
         <div className="product">
             <div className="product-title">
@@ -47,7 +55,7 @@ function Product () {
 
             <br></br>
     
-            <button className='addtocart' data-testid="button" type="submit">
+            <button className='addtocart' data-testid="button" onClick={handleSubmit} type="submit">
             <h1 className="product-item1"> ADD TO CART</h1> 
             </button>
             <p className="product-item2"> $45 USD </p> 
