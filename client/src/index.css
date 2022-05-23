@@ -393,6 +393,7 @@ input {
 }
 
 .container {
+  margin-top: 15px;
   overflow: hidden;
 }
 
