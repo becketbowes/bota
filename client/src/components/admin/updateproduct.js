@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
 function UpdateProduct({id}) {
     // replace with get product by id call from betwixt the parentheses in main function, coming from viewproducts page
@@ -21,13 +21,13 @@ function UpdateProduct({id}) {
     // const [quantity, setQuantity] = useState(product.quantity);
     // const [usdPrice, setUsdPrice] = useState(product.usdPrice);
 
-    const [title, setTitle] = useState('');
-    const [sku, setSku] = useState('');
-    const [img, setImg] = useState('');
-    const [imageAlt, setImageAlt] = useState('');
-    const [description, setDescription] = useState('');
-    const [quantity, setQuantity] = useState('');
-    const [usdPrice, setUsdPrice] = useState('');
+    const [title, setTitle] = useState(product.title);
+    const [sku, setSku] = useState(product.sku);
+    const [img, setImg] = useState(product.img);
+    const [imageAlt, setImageAlt] = useState(product.imageAlt);
+    const [description, setDescription] = useState(product.description);
+    const [quantity, setQuantity] = useState(product.quantity);
+    const [usdPrice, setUsdPrice] = useState(product.usdPrice);
 
     const inputHandle = (e) => {
         const { target } = e;
@@ -71,7 +71,7 @@ function UpdateProduct({id}) {
             <form className="adminuItem">
                 <div className="adminuSpace">•••</div>
                 <div className='adminufile'>
-                    <label for='file' className='adminubutton'>Add image file:</label>
+                    <label for='file' className='adminubutton'>Replace Product Image File:</label>
                     <input value={img} type='file' name='img' onChange={inputHandle} className='adminubutton' placeholder='Drop Image Here' />
                 </div>
                 <textarea value={title} type='title' name='title' onChange={inputHandle} className="adminuText" placeholder={product.title}></textarea>

@@ -1,4 +1,4 @@
-function RemoveAdmins(id) {
+function RemoveAdmins({id}) {
     const removeAdmin = (id) => { alert(`admin ${id} is nobody to us!!!`)}
 
     return (
