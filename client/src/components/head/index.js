@@ -2,17 +2,17 @@ import { useState } from 'react'
 import logo from '../../assets/img/botalogoclear.png';
 import dot from '../../assets/img/botadot.png';
 import Nav from '../nav';
-import About from '../about/index';
-import Shop from '../shop/index';
-import Gift from '../gift/index';
-import Contact from '../contact/index';
-import Product from '../product/index';
-import Home from '../home/index';
-
+import About from '../about';
+import Shop from '../shop';
+import Gift from '../gift';
+import Contact from '../contact';
+import Product from '../product';
+import Home from '../home';
+import Admin from '../admin';
 
 function Head() {
     const [nav, setNav] = useState(false);
-
+    const [currentPage, setCurrentPage] = useState('Home');
     // const showMenu = () => {
     //     setNav(true);
     // }
@@ -21,9 +21,9 @@ function Head() {
         setTimeout(() => setNav(false), 5000)
         setNav(true);
     }
-    const handlePageChange = (page) => setCurrentPage(page);
-    const [currentPage, setCurrentPage] = useState('Home');
 
+    const handlePageChange = (page) => setCurrentPage(page);
+  
     const renderPage = () => {
       
         if (currentPage === 'About') {
@@ -39,11 +39,11 @@ function Head() {
           return <Gift />;
         }
         if (currentPage === 'Contact') {
-          return <Contact />;
+          return <Contact handlePageChange={handlePageChange} />;
         }
-        // if (currentPage === 'Contact') {
-        //   return <Contact />;
-        // }
+        if (currentPage === 'Admin') {
+          return <Admin />;
+        }
         return < Home/>;
       };
     

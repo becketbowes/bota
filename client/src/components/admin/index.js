@@ -40,7 +40,7 @@ function Admin() {
         <section className='adminupop'>
             <Adminu content={content} handleContent={handleContent} />
             {adminuDisplay()}
-            <button className="adminubutton" onClick={() => handleContent('adminu')}>••• logout •••</button>
+            <button className="adminubutton" onClick={() => window.location.reload(false)}>••• logout •••</button>
         </section>
     );
 }

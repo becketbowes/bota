@@ -17,7 +17,7 @@ function Product () {
                 <h1>PLANET HEALTH</h1>
             </div>
             <div className="product-item">
-            <img src={productimage} className="my-2" style={{ width: "50%", height: "600px" }} alt="cover" />   
+            <img src={productimage} className="my-2" style={{ width: "50%", height: "auto" }} alt="cover" />   
     
             <h1 className="product-name1"> body  ____</h1> 
             <h1 className="product-name2"> cream</h1> 
@@ -27,7 +27,7 @@ function Product () {
          
             </div>
             <div className="product-item">
-            <img src={productimage2} className="my-2" style={{ width: "50%", height: "600px" }} alt="cover" />   
+            <img src={productimage2} className="my-2" style={{ width: "50%", height: "auto" }} alt="cover" />   
     
             <h1 className="product-item1"> guidance</h1> 
             <p className="product-item2"> gently warm up in the palm of your hands, glide softly into skin and massage to your hearts content</p> 
@@ -35,7 +35,7 @@ function Product () {
            
             </div>
             <div className="product-item">
-            <img src={productimage3} className="my-2" style={{ width: "50%", height: "600px" }} alt="cover" />   
+            <img src={productimage3} className="my-2" style={{ width: "50%", height: "auto" }} alt="cover" />   
     
             <h1 className="product-item1"> ingredients</h1> 
             <p className="product-item2"> macadamia seed oil, castor seed oil, sunflower oil, vetiver root, cedarwood oil, grapefruit peel oil, bergamot fruit oil, vanilla bean extract</p> 
@@ -43,7 +43,7 @@ function Product () {
            
             </div>
             <div className="product-item">
-            <img src={productimage4} className="my-2" style={{ width: "50%", height: "600px" }} alt="cover" />   
+            <img src={productimage4} className="my-2" style={{ width: "50%", height: "auto" }} alt="cover" />   
 
             <br></br>
     
