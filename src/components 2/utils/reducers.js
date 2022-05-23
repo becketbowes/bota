@@ -6,7 +6,6 @@ import {
   REMOVE_FROM_CART,
   ADD_MULTIPLE_TO_CART,
   UPDATE_INVENTORY,
-  UPDATE_CURRENT_INVENTORY,
   CLEAR_CART,
   TOGGLE_CART,
 } from "./actions";
@@ -29,11 +28,50 @@ export const reducer = (state, action) => {
     case ADD_MULTIPLE_TO_CART:
       return {
         ...state,
+        cart: [...state.cart, ...action.products],
+      };
+
+    case UPDATE_CART_QUANTITY:
+      return {
+        ...state,
         cartOpen: true,
         cart: state.cart.map((product) => {
-          if (action.id === product._id) {
+          if (action._id === product.id) {
+            product.purchaseQuantity = action.purchaseQuantity;
           }
+          return product;
         }),
       };
+    case REMOVE_FROM_CART:
+      let newState = state.cart.filter((product) => {
+        return product.id !== action_id;
+      });
+      return {
+        ...state,
+        cartOpen: newState.length > 0,
+        cart: newState,
+      };
+    case CLEAR_CART:
+      return {
+        ...state,
+        cartOpen: false,
+        cart: [],
+      };
+    case TOGGLE_CART:
+      return {
+        ...state,
+        cartOpen: !state.cartOpen,
+      };
+    case UPDATE_INVENTORY:
+      return {
+        ...state,
+        inventories: [...action.inventory],
+      };
+    default:
+      return state;
   }
 };
+
+export function useProductReducer(initalState) {
+  return useReducer(reducer, initialState);
+}
