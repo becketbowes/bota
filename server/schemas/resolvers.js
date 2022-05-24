@@ -1,6 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');;
 const { Product, User, Note, Blog, Invoice, VibeText, VibeImage } = require('../models');
 const { signToken } = require('../utils/auth');
+const { kind } = require('./typeDefs');
 //second parentheses is the test key. Once a real Stripe account is created, replace this with an environment variable, i.e. process.env.STRIPE_KEY
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc')
 
@@ -26,6 +27,7 @@ const resolvers = {
             }
             throw new AuthenticationError('Not logged in')
         },
+        //can we change this to two requests - read and unread and add user.admin read only?
         notes: async () => {
             return await Note.find();
         },
