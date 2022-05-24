@@ -1,17 +1,19 @@
+import { useQuery } from '@apollo/client';
+import { QUERY_ALL_NOTES } from '../utils/queries'
+
 function Messages() {
-    //replace with route call:
-    const getMessages = [
-        {title: "message title one", text: "message text 1", email: "one@email.com", createdAt: "Sun Apr 17 2022 00:35:37 GMT+0000"},
-        {title: "message title two", text: "message text 2", email: "two@email.com", createdAt: "Sun Apr 03 2022 20:31:37 GMT+0000"}
-    ];
+    const { data } = useQuery(QUERY_ALL_NOTES);
+    const notes = data?.notes || [];
+
+    //create button and query to see all previously read messages... someday
 
     return (
         <>
-            {getMessages.length && getMessages.map((message) => (
+            {notes.length && notes.map((message) => (
                 <article className="adminuItem">
-                    <div className="adminuTitle">{message.title}</div>
+                    <div className="adminuTitle">{message.name}</div>
                     <span className="adminuMeta">{message.createdAt}</span>
-                    <div className="adminuText">{message.text}</div>
+                    <div className="adminuText">{message.message}</div>
                     <button className="adminubutton" onClick={() => window.location = `mailto:${message.email}`}>••• Reply •••</button>
                     <span className="adminuSpace">•••</span>
                 </article>

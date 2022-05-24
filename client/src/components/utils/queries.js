@@ -9,7 +9,7 @@ export const QUERY_CHECKOUT = gql`
 `;
 
 export const QUERY_ALL_PRODUCTS = gql`
-  {
+  query products{
     products {
       _id
       sku
@@ -17,8 +17,25 @@ export const QUERY_ALL_PRODUCTS = gql`
       description
       usdPrice
       image
-      imagAlt
+      imageAlt
       quantity
+    }
+  }
+`;
+
+export const QUERY_PRODUCT = gql`
+  query getProduct($_id: ID) {
+    product(_id: $_id) {
+      products {
+        _id
+        sku
+        name
+        description
+        usdPrice
+        image
+        imagAlt
+        quantity
+      }
     }
   }
 `;
@@ -44,3 +61,17 @@ export const QUERY_USER = gql`
     }
   }
 `;
+
+export const QUERY_ALL_NOTES = gql`
+  query notes {
+    notes{
+      _id
+      name
+      email
+      message
+      createdAt
+      read
+    }
+  }
+`;
+

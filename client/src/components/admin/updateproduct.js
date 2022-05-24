@@ -1,7 +1,7 @@
 import { useMutation, useQuery } from '@apollo/client';
 import { useState } from 'react';
 import { UPDATE_PRODUCT } from '../utils/mutations';
-import { QUERY_USER } from '../utils/queries';
+import { QUERY_PRODUCT } from '../utils/queries';
 
 function UpdateProduct({id}) {
     // replace with get product by id call from betwixt the parentheses in main function, coming from viewproducts page
@@ -16,7 +16,7 @@ function UpdateProduct({id}) {
     //     usdPrice: 100000,    
     // };
 
-    const {product} = useQuery(QUERY_USER);
+    const {product} = useQuery(QUERY_PRODUCT);
     const {newProduct} = useMutation(UPDATE_PRODUCT);
 
     // const [title, setTitle] = useState(product.title);
@@ -57,10 +57,25 @@ function UpdateProduct({id}) {
         }
     };
 
-    const submitHandle = (e) => {
+    const submitHandle = async (e) => {
         e.preventDefault();
-
         // add product to database
+        try {
+            const mutationResponse = await newProduct({
+                product: {
+                    name: title,
+                    sku: sku,
+                    image: img,
+                    imageAlt: imageAlt,
+                    description: description,
+                    quantity: quantity,
+                    usdPrice: usdPrice
+                }
+            })
+            mutationResponse()
+        } catch (err) {
+            console.log(err)
+        }
 
         alert(`The product: ${title} has been updated`);
         setTitle('');
