@@ -16,8 +16,9 @@ function UpdateProduct({id}) {
     //     usdPrice: 100000,    
     // };
 
-    const {product} = useQuery(QUERY_PRODUCT);
-    const {newProduct} = useMutation(UPDATE_PRODUCT);
+    const { data } = useQuery(QUERY_PRODUCT);
+    const product = data?.product || [];
+    const [updatedProduct, {error}] = useMutation(UPDATE_PRODUCT);
 
     // const [title, setTitle] = useState(product.title);
     // const [sku, setSku] = useState(product.sku);
@@ -60,23 +61,38 @@ function UpdateProduct({id}) {
     const submitHandle = async (e) => {
         e.preventDefault();
         // add product to database
-        try {
-            const mutationResponse = await newProduct({
-                product: {
-                    name: title,
-                    sku: sku,
-                    image: img,
-                    imageAlt: imageAlt,
-                    description: description,
-                    quantity: quantity,
-                    usdPrice: usdPrice
-                }
-            })
-            mutationResponse()
-        } catch (err) {
-            console.log(err)
-        }
+        // try {
+        //     const mutationResponse = await new Product({
+        //         product: {
+        //             name: title,
+        //             sku: sku,
+        //             image: img,
+        //             imageAlt: imageAlt,
+        //             description: description,
+        //             quantity: quantity,
+        //             usdPrice: usdPrice
+        //         }
+        //     })
+        //     mutationResponse()
+        // } catch (err) {
+        //     console.log(err)
+        // }
+        
 
+        try {
+            const { data } = await new updatedProduct({ 
+                product: {
+                name: title,
+                sku: sku,
+                image: img,
+                imageAlt: imageAlt,
+                description: description,
+                quantity: quantity,
+                usdPrice: usdPrice
+                }
+            });
+        } catch(error) { console.log(error) };
+        
         alert(`The product: ${title} has been updated`);
         setTitle('');
         setSku('');

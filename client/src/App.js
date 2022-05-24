@@ -1,13 +1,13 @@
 import Head from './components/head/index';
 import Toe from './components/toe';
-// import Admin from './components/admin';
+import Admin from './components/admin';
 
 function App() {
 
     return (
       <>
           <Head></Head>
-          {/* <Admin></Admin> */}
+          <Admin></Admin>
           <Toe></Toe>
       </>
     );
