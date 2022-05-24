@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../utils/helpers';
 import Admin from '../admin';
-import {useMutation} from '@apollo/client'
+import { useMutation } from '@apollo/client'
 import { ADD_NOTE } from '../utils/mutations'
 
 function Contact() {
