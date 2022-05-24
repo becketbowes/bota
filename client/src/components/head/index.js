@@ -47,13 +47,16 @@ function Head() {
         if (currentPage === 'Admin') {
           return <Admin />;
         }
+        if (currentPage === 'Home') {
+          return <Home />;
+        }
         return < Home/>;
       };
     
     return (
         <header>
             <div className='title' onMouseOver={menu}>
-            <img src={logo} className="botalogo" alt="bota" />
+            <img src={logo} className="botalogo" alt="bota" onClick={() => setCurrentPage('Home')}/>
             <img src={dot} className="botadot" alt="a round round circle" />
             </div>
             <div>

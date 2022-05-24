@@ -72,6 +72,7 @@ export const ADD_PRODUCT = gql`
             image: $image, imageAlt: $imageAlt 
             quantity: $quantity
         ) {
+            _id
             sku
             name
             description
@@ -80,5 +81,38 @@ export const ADD_PRODUCT = gql`
             imageAlt
             quantity
         }
+    }
+`;
+
+export const UPDATE_PRODUCT = gql`
+    mutation updateProduct(
+      $_id: ID!
+      $sku: String!
+      $name: String!
+      $description: String!
+      $usdPrice: Float!
+      $image: String!
+      $imageAlt: String!
+      $quantity: Int!
+    ) {
+      updateProduct(
+        _id: $_id
+        sku: $sku
+        name: $name
+        description: $description
+        usdPrice: $usdPrice
+        image: $image
+        imageAlt: $imageAlt
+        quantity: $quantity
+      ) {
+        _id
+        sku
+        name
+        description
+        usdPrice
+        image
+        imageAlt
+        quantity
+      }
     }
 `;
