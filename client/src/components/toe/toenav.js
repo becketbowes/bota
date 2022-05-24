@@ -1,8 +1,7 @@
-import React from 'react';
+import { useState } from 'react';
+import PrivacyModal from '../privacy/index';
 
-//const handlePageChange = (page) => setCurrentPage(page);
-
-function Toenav({ toenav }) {
+{/*function Toenav({ toenav }) {
   if (!toenav) {
     return null
   }
@@ -22,6 +21,12 @@ function Toenav({ toenav }) {
             </span>
           </li>
           <li>
+            <span href='#Social' onClick={() => handlePageChange('Social')}
+            className={currentPage === 'Social' ? 'nav-link active' : 'nav-link'}> 
+                Social
+            </span>
+          </li>
+          <li>
             <span href='#Privacy' onClick={() => handlePageChange('Privacy')}
             className={currentPage === 'Privacy' ? 'nav-link active' : 'nav-link'}> 
                 Privacy Policy
@@ -35,6 +40,41 @@ function Toenav({ toenav }) {
         </ul>
       </div>
   );
+} */}
+
+function Toenav({ toenav }) {
+  const [openModal, setOpenModal] = useState(false)
+  if (!toenav) {
+    return null
+  }
+  return (
+    <nav className="footer-nav">
+      <li>
+        <a className="footer-link">Contact</a>
+      </li>
+      <li>
+        <a className="footer-link">
+          FAQ
+        </a>
+      </li>
+      <li>
+        <a className="footer-link">
+          Social
+        </a>
+      </li>
+      <li>
+        <a className="footer-link openModal" onClick={() => {
+          setOpenModal(true);
+          }}>Privacy Policy</a>
+        {openModal &&<PrivacyModal closeModal={setOpenModal} />}
+      </li>
+      <li>
+        <a href="https://github.com/becketbowes/bota" className="footer-link">
+          &copy; Group2Designs 
+        </a>
+      </li>
+    </nav>
+  )
 }
 
 export default Toenav;

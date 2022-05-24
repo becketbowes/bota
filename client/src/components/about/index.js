@@ -1,5 +1,5 @@
 import React from 'react';
-import Product from '../../assets/img/P1000210.jpg';
+import Product from '../../assets/img/P1000168.jpg'
 import logo from '../../assets/img/botalogoclear.png';
 import endProduct from '../../assets/img/P1000229.jpg';
 
