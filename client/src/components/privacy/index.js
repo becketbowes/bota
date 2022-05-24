@@ -181,7 +181,7 @@ function PrivacyModal ({ closeModal }) {
                     <p>If you have any questions about this Privacy Policy, You can contact us:</p>
                     <ul>
                     <li>By visiting this page on our website: <a href="www.bota.com/contact" rel="external nofollow noopener" target="_blank">www.bota.com/contact</a></li>
-                </ul>
+                    </ul>
             </div>
         </div>
     )
