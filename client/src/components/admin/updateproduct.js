@@ -1,17 +1,23 @@
+import { useMutation, useQuery } from '@apollo/client';
 import { useState } from 'react';
+import { UPDATE_PRODUCT } from '../utils/mutations';
+import { QUERY_USER } from '../utils/queries';
 
 function UpdateProduct({id}) {
     // replace with get product by id call from betwixt the parentheses in main function, coming from viewproducts page
-    const product = {
-        id: id,
-        title: "lipstick",
-        sku: "UGG-BB-PUR-06",
-        image: "lipstick.jpg",
-        imageAlt: "a picture of our lipstick",
-        description: "one full ounce of unicorn blood suspended in Donald Trump's latest liposuction lard",
-        quantity: 2254,
-        usdPrice: 100000,    
-    };
+    // const product = {
+    //     id: id,
+    //     title: "lipstick",
+    //     sku: "UGG-BB-PUR-06",
+    //     image: "lipstick.jpg",
+    //     imageAlt: "a picture of our lipstick",
+    //     description: "one full ounce of unicorn blood suspended in Donald Trump's latest liposuction lard",
+    //     quantity: 2254,
+    //     usdPrice: 100000,    
+    // };
+
+    const {product} = useQuery(QUERY_USER);
+    const {newProduct} = useMutation(UPDATE_PRODUCT);
 
     // const [title, setTitle] = useState(product.title);
     // const [sku, setSku] = useState(product.sku);
@@ -21,7 +27,7 @@ function UpdateProduct({id}) {
     // const [quantity, setQuantity] = useState(product.quantity);
     // const [usdPrice, setUsdPrice] = useState(product.usdPrice);
 
-    const [title, setTitle] = useState(product.title);
+    const [title, setTitle] = useState('product.title');
     const [sku, setSku] = useState(product.sku);
     const [img, setImg] = useState(product.img);
     const [imageAlt, setImageAlt] = useState(product.imageAlt);

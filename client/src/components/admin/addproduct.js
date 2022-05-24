@@ -1,5 +1,8 @@
 import { useState } from 'react';
+
+//import this:
 import { useMutation } from '@apollo/client';
+//import query/mutations
 import { ADD_PRODUCT } from '../utils/mutations'
 
 function AddProduct() {
