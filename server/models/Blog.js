@@ -4,12 +4,17 @@ const dateFormat = require('../utils/dateFormat')
 
 const blogSchema = new Schema (
     {
+        title: {
+            type: String,
+            required: true
+        },
         text: {
             type: String,
             required: true
         },
         image: {
-            type: String
+            type: String,
+            required: false
         },
         date: {
             type: Date,

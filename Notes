@@ -6,8 +6,7 @@ about page request: vibeImage
 about page request: vibeText
 vibe page request: vibeTexts
 vibe page request: vibeImages
-
-shop:
+onload shop:
 products(return all products)
 product(return product by id)
 
