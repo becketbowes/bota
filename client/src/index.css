@@ -191,6 +191,11 @@ input {
   margin-top: 30px;
 }
 
+.footer-link {
+  float: left;
+  padding: 0px 100px 15px 75px;
+}
+
 /* media queries */
 @media screen and (min-width: 1000px) {
   h1 {
@@ -248,6 +253,7 @@ input {
 
 .navbarmain {
   width: 20%;
+  z-index: 500;
 
 }
 
@@ -395,6 +401,7 @@ input {
 .container {
   margin-top: 15px;
   overflow: hidden;
+  z-index: -1;
 }
 
 .sliding-background {
