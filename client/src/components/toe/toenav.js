@@ -1,4 +1,5 @@
-import React from 'react';
+import { useState } from 'react';
+import PrivacyModal from '../privacy/index';
 
 {/*function Toenav({ toenav }) {
   if (!toenav) {
@@ -42,6 +43,7 @@ import React from 'react';
 } */}
 
 function Toenav({ toenav }) {
+  const [openModal, setOpenModal] = useState(false)
   if (!toenav) {
     return null
   }
@@ -61,7 +63,10 @@ function Toenav({ toenav }) {
         </a>
       </li>
       <li>
-        <a className="footer-link">Privacy Policy</a>
+        <a className="footer-link openModal" onClick={() => {
+          setOpenModal(true);
+          }}>Privacy Policy</a>
+        {openModal &&<PrivacyModal closeModal={setOpenModal} />}
       </li>
       <li>
         <a href="https://github.com/becketbowes/bota" className="footer-link">

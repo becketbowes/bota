@@ -421,3 +421,13 @@ input {
     /* The image width */
   }
 }
+
+/* Privacy Policy */
+
+.modalTitle {
+  padding-top: 50px;
+}
+
+.modalHeader {
+  text-align: center;
+}
