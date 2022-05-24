@@ -1,19 +1,23 @@
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import { useState } from 'react';
 import { UPDATE_PRODUCT } from '../utils/mutations';
+import { QUERY_USER } from '../utils/queries';
 
 function UpdateProduct({id}) {
     // replace with get product by id call from betwixt the parentheses in main function, coming from viewproducts page
-    const product = {
-        id: id,
-        title: "lipstick",
-        sku: "UGG-BB-PUR-06",
-        image: "lipstick.jpg",
-        imageAlt: "a picture of our lipstick",
-        description: "one full ounce of unicorn blood suspended in Donald Trump's latest liposuction lard",
-        quantity: 2254,
-        usdPrice: 100000,    
-    };
+    // const product = {
+    //     id: id,
+    //     title: "lipstick",
+    //     sku: "UGG-BB-PUR-06",
+    //     image: "lipstick.jpg",
+    //     imageAlt: "a picture of our lipstick",
+    //     description: "one full ounce of unicorn blood suspended in Donald Trump's latest liposuction lard",
+    //     quantity: 2254,
+    //     usdPrice: 100000,    
+    // };
+
+    const {product} = useQuery(QUERY_USER);
+    const {newProduct} = useMutation(UPDATE_PRODUCT);
 
     // const [title, setTitle] = useState(product.title);
     // const [sku, setSku] = useState(product.sku);
