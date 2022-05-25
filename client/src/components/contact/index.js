@@ -34,20 +34,14 @@ function Contact() {
     if (formState.name === 'Margarine is gross') {
       setLogin(!login)
     }
+    
     if (!errorMessage) {
       console.log('Submit Form', formState);
-   
-      await addNote({
-        variables: {
-          name: formState.name,
-          email: formState.email,
-          message: formState.message
-        }
-      })
+      await addNote({ variables: formState })
     }
     
     //reset the form
-    setFormState({ name: '', email: '', message: '' }); 
+    await setFormState({ name: '', email: '', message: '' }); 
     window.location.reload(true); 
     alert('message sent!');
   };
