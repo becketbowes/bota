@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { pluralize } from "../utils/helpers";
-import { useStoreContext } from "../utils/GlobalState";
-import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../utils/actions";
-import { idbPromise } from "../utils/helpers";
+import { pluralize } from "../../../../src/components 2/utils/helpers";
+import { useStoreContext } from "../../../../src/components 2/utils/GlobalState";
+import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../../../src/components 2/utils/actions";
+import { idbPromise } from "../../../../src/components 2/utils/helpers";
 import CartItem from "../CartItem";
 
 function Product(item) {
