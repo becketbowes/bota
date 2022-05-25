@@ -24,18 +24,16 @@ export const QUERY_ALL_PRODUCTS = gql`
 `;
 
 export const QUERY_PRODUCT = gql`
-  query getProduct($_id: ID) {
+  query getProduct($_id: ID!) {
     product(_id: $_id) {
-      products {
         _id
         sku
         name
         description
         usdPrice
         image
-        imagAlt
+        imageAlt
         quantity
-      }
     }
   }
 `;
