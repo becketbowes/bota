@@ -1,34 +1,17 @@
 import { useMutation, useQuery } from '@apollo/client';
 import { useState } from 'react';
-import { UPDATE_PRODUCT } from '../utils/mutations';
+import { EDIT_PRODUCT } from '../utils/mutations';
 import { QUERY_PRODUCT } from '../utils/queries';
 
 function UpdateProduct({id}) {
-    // replace with get product by id call from betwixt the parentheses in main function, coming from viewproducts page
-    // const product = {
-    //     id: id,
-    //     title: "lipstick",
-    //     sku: "UGG-BB-PUR-06",
-    //     image: "lipstick.jpg",
-    //     imageAlt: "a picture of our lipstick",
-    //     description: "one full ounce of unicorn blood suspended in Donald Trump's latest liposuction lard",
-    //     quantity: 2254,
-    //     usdPrice: 100000,    
-    // };
-
-    const { data } = useQuery(QUERY_PRODUCT);
+    const { data } = useQuery(QUERY_PRODUCT, { variables: { _id: id } });
     const product = data?.product || [];
-    const [updatedProduct, {error}] = useMutation(UPDATE_PRODUCT);
+    console.log('id: ', id)
+    console.log('product: ', product);
+    const [updatedProduct, { error }] = useMutation(EDIT_PRODUCT, { variables: { _id: id } });
+    if (error) { console.log(error); };
 
-    // const [title, setTitle] = useState(product.title);
-    // const [sku, setSku] = useState(product.sku);
-    // const [img, setImg] = useState(product.image);
-    // const [imageAlt, setImageAlt] = useState(product.imageAlt);
-    // const [description, setDescription] = useState(product.description);
-    // const [quantity, setQuantity] = useState(product.quantity);
-    // const [usdPrice, setUsdPrice] = useState(product.usdPrice);
-
-    const [title, setTitle] = useState('product.title');
+    const [title, setTitle] = useState(product.name);
     const [sku, setSku] = useState(product.sku);
     const [img, setImg] = useState(product.img);
     const [imageAlt, setImageAlt] = useState(product.imageAlt);
@@ -58,29 +41,13 @@ function UpdateProduct({id}) {
         }
     };
 
-    const submitHandle = async (e) => {
+    const submitHandle = (e) => {
         e.preventDefault();
-        // add product to database
-        // try {
-        //     const mutationResponse = await new Product({
-        //         product: {
-        //             name: title,
-        //             sku: sku,
-        //             image: img,
-        //             imageAlt: imageAlt,
-        //             description: description,
-        //             quantity: quantity,
-        //             usdPrice: usdPrice
-        //         }
-        //     })
-        //     mutationResponse()
-        // } catch (err) {
-        //     console.log(err)
-        // }
-        
+        console.log('new title: ', title);
+        console.log('product name sku image imageAlt description quantity usdPrice', title, sku, img, imageAlt, description, quantity, usdPrice)
 
         try {
-            const { data } = await new updatedProduct({ 
+            const newData = new updatedProduct({ 
                 product: {
                 name: title,
                 sku: sku,
@@ -91,7 +58,9 @@ function UpdateProduct({id}) {
                 usdPrice: usdPrice
                 }
             });
-        } catch(error) { console.log(error) };
+            console.log('newData: ', newData)
+        } 
+        catch(err) { console.log(err) };
         
         alert(`The product: ${title} has been updated`);
         setTitle('');
@@ -111,7 +80,7 @@ function UpdateProduct({id}) {
                     <label for='file' className='adminubutton'>Replace Product Image File:</label>
                     <input value={img} type='file' name='img' onChange={inputHandle} className='adminubutton' placeholder='Drop Image Here' />
                 </div>
-                <textarea value={title} type='title' name='title' onChange={inputHandle} className="adminuText" placeholder={product.title}></textarea>
+                <textarea value={title} type='title' name='title' onChange={inputHandle} className="adminuText" defaultValue={product.name}></textarea>
                 <textarea value={description} type='description' name='description' onChange={inputHandle} className="adminuText" placeholder={product.description}></textarea>
                 <textarea value={sku} type='sku' name='sku' onChange={inputHandle} className="adminuText" placeholder={product.sku}></textarea>
                 <textarea value={imageAlt} type='imageAlt' onChange={inputHandle} name='imageAlt' className="adminuText" placeholder={product.imageAlt}></textarea>

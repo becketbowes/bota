@@ -31,7 +31,7 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (formState.name === 'Fucking Nancy Botwin') {
+    if (formState.name === 'Margarine is gross') {
       setLogin(!login)
     }
     if (!errorMessage) {

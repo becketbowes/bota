@@ -158,10 +158,18 @@ const resolvers = {
 
             return product;
         },
+        //WORKING!!!!Wooot!
+        editProduct: async (parent, {_id, ...args}) => {
+
+            return await Product.findByIdAndUpdate(_id, { name: args.name, sku: args.sku, img: args.img, imageAlt: args.imgAlt, description: args.description, quantity: args.quantity, usdPrice: args.usdPrice }, { new: true });
+        },
         updateProduct: async (parent, { _id, quantity }) => {
             const decrement = Math.abs(quantity) * -1;
       
             return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+        },
+        removeProduct: async (parent, _id) => {
+            return await Product.findByIdAndDelete(_id);
         },
         addVibeImage: async (parent, args) => {
             const vibeImage = await VibeImage.create(args);

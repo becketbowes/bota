@@ -62,9 +62,12 @@ function AddProduct() {
         <>
             <form className="adminuItem">
                 <div className="adminuSpace">•••</div>
+                <div className='adminufile'>
+                    <label for='file' className='adminubutton'>Product Image File:</label>
+                    <input value={img} type='file' name='img' onChange={inputHandle} className='adminubutton' placeholder='Drop Image Here' />
+                </div>
                 <input value={name} name="name" onChange={inputHandle} type="name" placeholder='Product Title' />
                 <input value={sku} name="sku" onChange={inputHandle} type="sku" placeholder='Product SKU' />
-                <input value={img} name="img" onChange={inputHandle} type="img" placeholder='Drop Image Here' />
                 <input value={imageAlt} name="imageAlt" onChange={inputHandle} type="imageAlt"  placeholder='Alternative text for image for the visually impaired'/>
                 <input value={description} name="description" onChange={inputHandle} type="description" placeholder='Product Description'/>
                 <input value={quantity} name="quantity" onChange={inputHandle} type="quantity" placeholder='Product Inventory - please enter unit numbers in digits only'/>
