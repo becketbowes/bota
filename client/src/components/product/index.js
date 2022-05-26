@@ -5,6 +5,7 @@ import productimage3 from '../../assets/img/P1000171.jpg'
 import Wares from '../wares';
 
 function Product() {
+
     return (
         <div className="product">
             <div className="product-title">
