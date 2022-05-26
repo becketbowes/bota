@@ -6,6 +6,7 @@ export const LOGIN = gql`
       token
       user {
         _id
+        admin
       }
     }
   }
@@ -53,7 +54,7 @@ export const ADD_PRODUCT = gql`
       $name: String!, 
       $description: String!, 
       $usdPrice: String!, 
-      $image: String!, 
+      $img: String!, 
       $imageAlt: String!, 
       $quantity: String!
       )
@@ -63,7 +64,7 @@ export const ADD_PRODUCT = gql`
           name: $name, 
           description: $description, 
           usdPrice: $usdPrice, 
-          image: $image, 
+          img: $img, 
           imageAlt: $imageAlt, 
           quantity: $quantity
       ) 
@@ -72,7 +73,7 @@ export const ADD_PRODUCT = gql`
       name
       description
       usdPrice
-      image
+      img
       imageAlt
       quantity
     }
@@ -86,7 +87,7 @@ export const EDIT_PRODUCT = gql`
       $name: String!, 
       $description: String!, 
       $usdPrice: String!, 
-      $image: String!, 
+      $img: String!, 
       $imageAlt: String!, 
       $quantity: String!
       ) {
@@ -96,7 +97,7 @@ export const EDIT_PRODUCT = gql`
           name: $name, 
           description: $description, 
           usdPrice: $usdPrice, 
-          image: $image, 
+          img: $img, 
           imageAlt: $imageAlt, 
           quantity: $quantity)
       {
@@ -105,7 +106,7 @@ export const EDIT_PRODUCT = gql`
       name
       description
       usdPrice
-      image
+      img
       imageAlt
       quantity
       }
@@ -116,4 +117,19 @@ export const REMOVE_PRODUCT = gql`
     mutation removeProduct ($_id: ID!) {
       removeProduct (_id: $_id)
     }
+`;
+
+export const ADD_INVOICE = gql`
+  mutation addInvoice($products: [ID]!) {
+    addInvoice(products: $products) {
+      purchaseDate
+      products {
+        _id
+        name
+        description
+        usdPrice
+        quantity
+      }
+    }
+  }
 `;

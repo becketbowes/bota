@@ -54,11 +54,13 @@ function Login() {
             }
         })
 
+        const admin = mutationResponse.data.login.user.admin
         const token = mutationResponse.data.login.token
-        Auth.login(token)
+        Auth.login(token, admin)
     }
 
     return(
+        <div className="contact-item">
         <section className="login">
             <div>
                 <h1 className="section-title">Login</h1>
@@ -82,6 +84,7 @@ function Login() {
                 </form>
             </div>    
         </section>
+        </div>
     )
 }
 

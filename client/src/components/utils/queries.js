@@ -9,16 +9,29 @@ export const QUERY_CHECKOUT = gql`
 `;
 
 export const QUERY_ALL_PRODUCTS = gql`
-  query products{
+{
     products {
       _id
       sku
       name
       description
       usdPrice
-      image
+      img
       imageAlt
       quantity
+    }
+  }
+`;
+
+export const QUERY_PRODUCTS = gql`
+  query getProducts($name: String) {
+    products(name: $name) {
+      _id
+      name
+      description
+      price
+      quantity
+      img
     }
   }
 `;
@@ -31,7 +44,7 @@ export const QUERY_PRODUCT = gql`
         name
         description
         usdPrice
-        image
+        img
         imageAlt
         quantity
     }
@@ -53,7 +66,7 @@ export const QUERY_USER = gql`
           description
           usdPrice
           quantity
-          image
+          img
         }
       }
     }

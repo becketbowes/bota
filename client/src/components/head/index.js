@@ -8,6 +8,7 @@ import Product from '../product';
 import Home from '../home';
 import Admin from '../admin';
 import Login from '../Login'
+import Detail from '../Detail'
 
 function Head() {
     const [nav, setNav] = useState(false);
@@ -17,7 +18,7 @@ function Head() {
     // }
 
     const menu = () => {
-        setTimeout(() => setNav(false), 5000)
+        setTimeout(() => setNav(false), 4000)
         setNav(true);
     }
 
@@ -42,6 +43,9 @@ function Head() {
         if (currentPage === 'Home') {
           return <Home />;
         }
+        if (currentPage === 'product/:id') {
+          return <Detail />;
+        }
         return < Home/>;
       };
     
@@ -51,11 +55,8 @@ function Head() {
             <img src={logo} className="botalogo" alt="bota" onClick={() => setCurrentPage('Home')}/>
             <img src={dot} className="botadot" alt="a round round circle" />
             </div>
-            <div>
-            <Nav nav={nav} currentPage={currentPage} handlePageChange={handlePageChange} />
-            {renderPage()}
-            </div>
-            
+                <Nav nav={nav} currentPage={currentPage} handlePageChange={handlePageChange} />
+                {renderPage()}
         </header>
     );
 }

@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { capitalizeFirstLetter } from '../utils/helpers'
 
 
 function Nav({ currentPage, handlePageChange, nav }) {
+  useEffect(() => {
+    document.title = capitalizeFirstLetter(currentPage)
+  }, [currentPage])
+
   if (!nav) {
     return null
   }
+
   return (
-      <div className='navbarmain'>
-        <ul>
+      <div className='navAnchor'>
+        <ul className='navFloat'>
         <li className="link">
-            <span href='#Login' onClick={() => handlePageChange('Login')}
+            <span href='#Login' onClick={() => handlePageChange('Login') }
               className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'}>
                 Login
               </span>
@@ -36,7 +42,6 @@ function Nav({ currentPage, handlePageChange, nav }) {
   
 
       </div>
-  
   );
 }
 
