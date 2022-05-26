@@ -29,7 +29,9 @@ const resolvers = {
         },
         //can we change this to two requests - read and unread and add user.admin read only?
         notes: async () => {
-            return await Note.find();
+            const note = await Note.find();
+
+            return note;
         },
         products: async (parent, { name }) => {
             const params = {};
@@ -137,7 +139,7 @@ const resolvers = {
         },
         addNote: async (parent, args) => {
             const note = await Note.create(args);
-            
+
             return note;
         },
         addUser: async (parent, args) => {
