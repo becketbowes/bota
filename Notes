@@ -1,3 +1,45 @@
+Still to do
+
+Secret phrase no goes to Adminlogin page which leads to admin - the token wasn't working when i started 
+and definitly isn't now, as i commented out a bunch of stuff out, but hopefully 
+it's easy to patch up? Any email/password combo presently open the admin, once
+you get to Admin login. 
+
+delete product from admin pages doesn't work
+
+Indexed DB for cart
+Deploy to Heroku
+
+Mobile ???
+
+
+
+
+Presentation notes for show
+
+Maybe display in Chrome inspector in phone mode for some or most of it
+to emphasise mobile first nature
+
+on your server in admin, enter the following three products - they are returned at the bottom
+of the products page on front-end
+
+single ramiken of bota
+one beautiful ceramic work that holds enough bota for about three months
+800pcs
+8000¢
+
+one year subscription
+keeps you in bota all year long! a new ramiken is sent every three months
+50pcs
+26000¢
+
+5 year subscription 
+live in a state of abundance knowing that you will have bota nearby for the forseeable future
+25pcs
+100000¢
+
+
+
 Frontend points of request for server:
 
 onload:

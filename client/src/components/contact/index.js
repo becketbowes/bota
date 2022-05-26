@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../utils/helpers';
-import Admin from '../admin';
-import Login from '../Login';
+import Adminlogin from '../Adminlogin';
 import { useMutation } from '@apollo/client'
 import { ADD_NOTE } from '../utils/mutations'
 
@@ -11,25 +10,7 @@ function Contact() {
   const { name, email, message } = formState;
   const [addNote] = useMutation(ADD_NOTE)
 
-  //secret entrance to admin
   const [login, setLogin] = useState(false);
-
-  //make actual password page for secret backend:
-
-  // const [adminName, setAdminName] = useState('');
-  // const [adminPass, setAdminPass] = useState('');
-
-  // const inputAdmin = (e) => {
-  //   const { target } = e;
-  //   const inputName = target.name;
-  //   const inputValue = target.value;
-
-  //   if (inputName === 'adminName') {
-  //     setAdminName(inputValue);
-  //   } else if (inputValue === 'adminPass') {
-  //     setAdminPass(inputValue)
-  //   }
-  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -72,7 +53,7 @@ function Contact() {
   return (
     <>
       {login ?
-          <Login />
+          <Adminlogin />
         : 
         <section className="contact-item">
           <div className=''>

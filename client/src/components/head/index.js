@@ -18,7 +18,7 @@ function Head() {
     // }
 
     const menu = () => {
-        setTimeout(() => setNav(false), 5000)
+        setTimeout(() => setNav(false), 4000)
         setNav(true);
     }
 
@@ -55,11 +55,8 @@ function Head() {
             <img src={logo} className="botalogo" alt="bota" onClick={() => setCurrentPage('Home')}/>
             <img src={dot} className="botadot" alt="a round round circle" />
             </div>
-            <div>
-            <Nav nav={nav} currentPage={currentPage} handlePageChange={handlePageChange} />
-            {renderPage()}
-            </div>
-            
+                <Nav nav={nav} currentPage={currentPage} handlePageChange={handlePageChange} />
+                {renderPage()}
         </header>
     );
 }
