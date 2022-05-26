@@ -6,6 +6,7 @@ export const LOGIN = gql`
       token
       user {
         _id
+        admin
       }
     }
   }
@@ -116,4 +117,19 @@ export const REMOVE_PRODUCT = gql`
     mutation removeProduct ($_id: ID!) {
       removeProduct (_id: $_id)
     }
+`;
+
+export const ADD_INVOICE = gql`
+  mutation addInvoice($products: [ID]!) {
+    addInvoice(products: $products) {
+      purchaseDate
+      products {
+        _id
+        name
+        description
+        usdPrice
+        quantity
+      }
+    }
+  }
 `;

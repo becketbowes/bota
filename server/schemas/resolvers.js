@@ -80,10 +80,11 @@ const resolvers = {
             return await VibeText.findById(_id)
         },
         checkout: async(parent, args, context) => {
+            const url = new URL(context.headers.referer).origin;
             const invoice = new Invoice({ products: args.products })
+            const line_items = [];
             
             const { products } = await invoice.populate('products');
-            const line_items = [];
 
             for (let i = 0; i < products.length; i++) {
                 // generate product id
@@ -112,8 +113,8 @@ const resolvers = {
                 payment_method_types: ['card'],
                 line_items,
                 mode: 'payment',
-                success_url: 'https://example.com/success?session_id={CHECKOUT_SESSION_ID}',
-                cancel_url: 'https://example.com/cancel'
+                success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
+                cancel_url: `${url}/`
               });
               
               return { session: session.id };
