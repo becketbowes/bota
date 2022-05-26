@@ -2,14 +2,9 @@ import React from 'react';
 import productimage from '../../assets/img/P1000210.jpg';
 import productimage2 from '../../assets/img/P1000186.jpg'
 import productimage3 from '../../assets/img/P1000171.jpg'
-import productimage4 from '../../assets/img/P1000229.jpg'
+import Wares from '../wares';
 
 function Product() {
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("You clicked me!")
-
-    }
     return (
         <div className="product">
             <div className="product-title">
@@ -40,12 +35,7 @@ function Product() {
                 <br></br>
             </div>
             <div className="product-item">
-                <img src={productimage4} className="my-2" style={{ width: "50%", height: "auto" }} alt="cover" />
-                <br></br>
-                <button className='addtocart' data-testid="button" onClick={handleSubmit} type="submit">
-                    <h1 className="product-item1"> ADD TO CART</h1>
-                </button>
-                <p className="product-item2"> $45 USD </p>
+                <Wares />
             </div>
         </div>
     )

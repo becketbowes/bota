@@ -6,10 +6,10 @@ function Nav({ currentPage, handlePageChange, nav }) {
     return null
   }
   return (
-      <div className='navbarmain'>
-        <ul>
+      <div className='navAnchor'>
+        <ul className='navFloat'>
         <li className="link">
-            <span href='#Login' onClick={() => handlePageChange('Login')}
+            <span href='#Login' onClick={() => handlePageChange('Login') }
               className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'}>
                 Login
               </span>
@@ -36,7 +36,6 @@ function Nav({ currentPage, handlePageChange, nav }) {
   
 
       </div>
-  
   );
 }
 
