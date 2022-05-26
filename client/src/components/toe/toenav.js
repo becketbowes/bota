@@ -14,29 +14,29 @@ function Toenav({ currentPage, handlePageChange, toenav }) {
   }
   return (
     <nav className="footer-nav">
-      <li>
+      <li className='footer-item'>
         <a href='#Contact' onClick={() => handlePageChange('Contact')}
         className={currentPage === 'Contact' ? 'footer-link active' : 'footer-link'}>
           Contact</a>
       </li>
-      <li>
+      <li className='footer-item'>
         <a href='#FAQ' onClick={() => handlePageChange('FAQ')}
         className={currentPage === 'FAQ' ? 'footer-link active' : 'footer-link'} >
           FAQ
         </a>
       </li>
-      <li>
+      <li className='footer-item'>
         <a href="https://www.instagram.com/igbosupply/">
-          <img src={Instagram} alt="instagram-logo" />
+          <img src={Instagram} alt="instagram-logo" className='ig-icon' />
         </a>
       </li>
-      <li className='privacyModal'>
+      <li className='footer-item'>
         <a className="footer-link openModal" onClick={() => {
           setOpenModal(true);
           }}>Privacy Policy</a>
         {openModal &&<PrivacyModal closeModal={setOpenModal} />}
       </li>
-      <li>
+      <li className='footer-item'>
         <a href="https://github.com/becketbowes/bota">
           &copy; Group2Designs 
         </a>
