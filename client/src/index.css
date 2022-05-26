@@ -191,9 +191,13 @@ input {
   margin-top: 30px;
 }
 
-.footer-link {
+.footer-item {
   float: left;
-  padding: 0px 100px 15px 75px;
+  padding: 0px 100px 10px 100px;
+}
+
+.ig-icon {
+  padding-bottom: 50px;
 }
 
 /* media queries */
