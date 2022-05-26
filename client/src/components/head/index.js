@@ -8,6 +8,7 @@ import Product from '../product';
 import Home from '../home';
 import Admin from '../admin';
 import Login from '../Login'
+import Detail from '../Detail'
 
 function Head() {
     const [nav, setNav] = useState(false);
@@ -41,6 +42,9 @@ function Head() {
         }
         if (currentPage === 'Home') {
           return <Home />;
+        }
+        if (currentPage === 'product/:id') {
+          return <Detail />;
         }
         return < Home/>;
       };

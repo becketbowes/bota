@@ -54,8 +54,9 @@ function Login() {
             }
         })
 
+        const admin = mutationResponse.data.login.user.admin
         const token = mutationResponse.data.login.token
-        Auth.login(token)
+        Auth.login(token, admin)
     }
 
     return(

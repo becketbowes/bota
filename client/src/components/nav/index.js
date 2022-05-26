@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { capitalizeFirstLetter } from '../utils/helpers'
 
 
 function Nav({ currentPage, handlePageChange, nav }) {
+  useEffect(() => {
+    document.title = capitalizeFirstLetter(currentPage)
+  }, [currentPage])
+
   if (!nav) {
     return null
   }
+
   return (
       <div className='navbarmain'>
         <ul>
