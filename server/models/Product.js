@@ -17,9 +17,8 @@ const productSchema = new Schema(
             required: true
         },
         usdPrice: {
-            type: Number,
+            type: String,
             required: true,
-            min: 0.99
         },
         image: {
             type: String,
@@ -30,9 +29,8 @@ const productSchema = new Schema(
             required: true
         },
         quantity: {
-            type: Number,
-            min: 0,
-            default: 0
+            type: String,
+            required: true
         }
     }
 );

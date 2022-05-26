@@ -10,6 +10,7 @@ function Contact() {
   const { name, email, message } = formState;
   const [addNote] = useMutation(ADD_NOTE)
 
+  //secret entrance to admin
   const [login, setLogin] = useState(false);
 
   //make actual password page for secret backend:

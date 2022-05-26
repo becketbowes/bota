@@ -33,25 +33,18 @@ export const ADD_NOTE = gql`
 `;
 
 export const ADD_USER = gql`
-  mutation addUser (
-    $firstName: String!
-    $lastName: String!
-    $email: String!
-    $password: String!
-    $admin: Boolean
-  ) {
-    addUser (
-      firstName: $firstName
-      lastName: $lastName
-      email: $email
-      password: $password
-      admin: $admin
-    ) {
-        firstName
-        lastName
-        email
+mutation addUser($firstName: String!, $lastName: String!, $email: String!, $password: String!, $admin: Boolean){
+  addUser (firstName: $firstName, lastName: $lastName, email: $email, password: $password, admin: $admin) {
+    token
+    user {
+      _id
+      firstName
+      lastName
+      email
+      admin
     }
   }
+}
 `;
 
 export const ADD_PRODUCT = gql`
@@ -59,7 +52,7 @@ export const ADD_PRODUCT = gql`
       $sku: String!, 
       $name: String!, 
       $description: String!, 
-      $usdPrice: Float!, 
+      $usdPrice: String!, 
       $image: String!, 
       $imageAlt: String!, 
       $quantity: String!
@@ -92,10 +85,11 @@ export const EDIT_PRODUCT = gql`
       $sku: String!, 
       $name: String!, 
       $description: String!, 
-      $usdPrice: Float!, 
+      $usdPrice: String!, 
       $image: String!, 
       $imageAlt: String!, 
-      $quantity: String!) {
+      $quantity: String!
+      ) {
         editProduct(
           _id: $_id, 
           sku: $sku, 
