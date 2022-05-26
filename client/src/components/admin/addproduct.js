@@ -3,13 +3,13 @@ import { useMutation } from '@apollo/client';
 import { ADD_PRODUCT } from '../utils/mutations';
 
 function AddProduct() {
-    const [product, setProduct] = useState({ sku:'', name:'', description:'', usdPrice:0, image:'', imageAlt:'', quantity:'' });
+    const [product, setProduct] = useState({ sku:'', name:'', description:'', usdPrice:0, img:'', imageAlt:'', quantity:'' });
     // const [error, setError] = useState('');
     const [addProduct] = useMutation(ADD_PRODUCT);
 
     const submitHandle = async (e) => {
         e.preventDefault();
-        
+
         console.table('pre send', product); 
         await addProduct({ variables: product });
         // if (product.sku && product.name && product.description && product.usdPrice && product.image && product.imageAlt && product.quantity) {
@@ -23,7 +23,7 @@ function AddProduct() {
         console.table('post send', product); 
 
         alert(`product ${product.name} added`);
-        setProduct({ sku:'', name:'', description:'', usdPrice:'', image:'', imageAlt:'', quantity:'' });   
+        setProduct({ sku:'', name:'', description:'', usdPrice:'', img:'', imageAlt:'', quantity:'' });   
         window.location.reload(true); 
     };
 
@@ -42,6 +42,7 @@ function AddProduct() {
                 <input defaultValue={product.name} name="name" onChange={inputHandle} type="name" placeholder='Product Title' />
                 <input defaultValue={product.sku} name="sku" onChange={inputHandle} type="sku" placeholder='Product SKU' />
                 {/* temp filename for develop */}
+                <input defaultValue={product.img} name="img" onChange={inputHandle} type="img"  placeholder='Alternative text for image for the visually impaired'/>
                 <input defaultValue={product.imageAlt} name="imageAlt" onChange={inputHandle} type="imageAlt"  placeholder='Alternative text for image for the visually impaired'/>
                 <input defaultValue={product.description} name="description" onChange={inputHandle} type="description" placeholder='Product Description'/>
                 <input defaultValue={product.quantity} name="quantity" onChange={inputHandle} type="quantity" placeholder='Product Inventory - please enter unit numbers in digits only'/>
