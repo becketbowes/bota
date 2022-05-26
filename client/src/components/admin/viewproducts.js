@@ -5,13 +5,13 @@ import UpdateProduct from "./updateproduct";
 import RemoveProduct from "./removeproduct";
 
 function ViewProduct() {
-    const [edit, setEdit] = useState(false);
-    const [remove, setRemove] = useState(false);
-
     const { loading, data } = useQuery(QUERY_ALL_PRODUCTS);
     const products = data?.products || [];
     console.log('loading:', loading, 'products:', products);
-        
+    
+    const [edit, setEdit] = useState(false);
+    const [remove, setRemove] = useState(false);
+
     return (
         <>
             {products.length && products.map((product) => (

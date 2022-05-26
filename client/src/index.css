@@ -1,5 +1,5 @@
 /* thematic color variables */
-.bota-light {
+* {
   --front: rgb(37, 38, 34);
   --strong: rgb(148, 67, 13);
   --mellow: rgb(200, 172, 134);
@@ -74,6 +74,18 @@ h5 {
 }
 
 /* links */
+.navAnchor {
+  position:relative;
+  background-color: transparent;
+}
+
+.navFloat {
+  z-index: 1000;
+  position:absolute;
+  background-color: transparent;
+  opacity: .8;
+}
+
 .navmenu {
   position: fixed;
   right: 5%;
@@ -83,16 +95,20 @@ h5 {
   margin-right: 5%;
   margin-left: 5%;
   background-color: transparent;
-  opacity: .8;
 }
 
 .link {
   color: var(--strong);
   font-weight: 500;
-  font-size: xx-large;
+  font-size: 400%;
   margin: 1px;
   padding: 25px;
-  opacity: 1;
+  background-color: inherit;
+}
+
+.nav-link {
+  background-color: transparent;
+  color: var(--strong);
 }
 
 /* admin */
@@ -178,7 +194,7 @@ input {
 /* footer styles */
 .toes {
   padding-top: 50px;
-  position: relative;
+  position:sticky;
   bottom: 10px;
   left: 50%;
   right: 50%;
@@ -272,7 +288,7 @@ input {
   bottom: 8px;
   right: 16px;
   background: transparent;
-  color: var(--back);
+  color: var(--strong);
 }
 
 .product-name2 {

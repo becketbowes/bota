@@ -1,3 +1,23 @@
+Still to do
+
+delete product from admin pages doesn't work
+Indexed DB for cart
+Deploy to Heroku
+
+Mobile ???
+
+
+
+
+Presentation notes for show
+
+Maybe display in Chrome inspector in phone mode for some or most of it
+to emphasise mobile first nature
+
+
+
+
+
 Frontend points of request for server:
 
 onload:
