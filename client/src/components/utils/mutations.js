@@ -53,7 +53,7 @@ export const ADD_PRODUCT = gql`
       $name: String!, 
       $description: String!, 
       $usdPrice: String!, 
-      $image: String!, 
+      $img: String!, 
       $imageAlt: String!, 
       $quantity: String!
       )
@@ -63,7 +63,7 @@ export const ADD_PRODUCT = gql`
           name: $name, 
           description: $description, 
           usdPrice: $usdPrice, 
-          image: $image, 
+          img: $img, 
           imageAlt: $imageAlt, 
           quantity: $quantity
       ) 
@@ -72,7 +72,7 @@ export const ADD_PRODUCT = gql`
       name
       description
       usdPrice
-      image
+      img
       imageAlt
       quantity
     }
@@ -86,7 +86,7 @@ export const EDIT_PRODUCT = gql`
       $name: String!, 
       $description: String!, 
       $usdPrice: String!, 
-      $image: String!, 
+      $img: String!, 
       $imageAlt: String!, 
       $quantity: String!
       ) {
@@ -96,7 +96,7 @@ export const EDIT_PRODUCT = gql`
           name: $name, 
           description: $description, 
           usdPrice: $usdPrice, 
-          image: $image, 
+          img: $img, 
           imageAlt: $imageAlt, 
           quantity: $quantity)
       {
@@ -105,7 +105,7 @@ export const EDIT_PRODUCT = gql`
       name
       description
       usdPrice
-      image
+      img
       imageAlt
       quantity
       }

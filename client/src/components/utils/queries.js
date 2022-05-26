@@ -16,7 +16,7 @@ export const QUERY_ALL_PRODUCTS = gql`
       name
       description
       usdPrice
-      image
+      img
       imageAlt
       quantity
     }
@@ -31,7 +31,7 @@ export const QUERY_PRODUCT = gql`
         name
         description
         usdPrice
-        image
+        img
         imageAlt
         quantity
     }
@@ -53,7 +53,7 @@ export const QUERY_USER = gql`
           description
           usdPrice
           quantity
-          image
+          img
         }
       }
     }
