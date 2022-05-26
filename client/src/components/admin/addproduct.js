@@ -3,7 +3,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_PRODUCT } from '../utils/mutations';
 
 function AddProduct() {
-    const [product, setProduct] = useState({ sku:'', name:'', description:'', usdPrice:0, img:'', imageAlt:'', quantity:'' });
+    const [product, setProduct] = useState({ sku:'', name:'', description:'', usdPrice:'', img:'', imageAlt:'', quantity:'' });
     // const [error, setError] = useState('');
     const [addProduct] = useMutation(ADD_PRODUCT);
 

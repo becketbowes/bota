@@ -191,6 +191,15 @@ input {
   margin-top: 30px;
 }
 
+.footer-item {
+  float: left;
+  padding: 0px 100px 10px 100px;
+}
+
+.ig-icon {
+  padding-bottom: 50px;
+}
+
 /* media queries */
 @media screen and (min-width: 1000px) {
   h1 {
@@ -248,6 +257,7 @@ input {
 
 .navbarmain {
   width: 20%;
+  z-index: 500;
 
 }
 
@@ -362,30 +372,23 @@ input {
   line-height: 1.6;
 }
 
-/* Accordion FAQs */
-.dropbtn {
-  background-color: var(--back);
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+/* FAQs */
+
+.faq {
+  text-align: center;
+}
+.chapter{
+  text-align: center;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
+.question {
+  font-weight: bold;
+  text-align: center;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
+.answer {
+  font-weight: lighter;
+  text-align: center;
 }
 
 .successful-purchase {
@@ -395,6 +398,7 @@ input {
 .container {
   margin-top: 15px;
   overflow: hidden;
+  z-index: -1;
 }
 
 .sliding-background {
@@ -413,4 +417,14 @@ input {
     transform: translate3d(-1692px, 0, 0);
     /* The image width */
   }
+}
+
+/* Privacy Policy */
+
+.modalTitle {
+  padding-top: 50px;
+}
+
+.modalHeader {
+  text-align: center;
 }

@@ -3,8 +3,6 @@ import logo from '../../assets/img/botalogoclear.png';
 import dot from '../../assets/img/botadot.png';
 import Nav from '../nav';
 import About from '../about';
-import Shop from '../shop';
-import Gift from '../gift';
 import Contact from '../contact';
 import Product from '../product';
 import Home from '../home';
@@ -34,12 +32,6 @@ function Head() {
         }
         if (currentPage === 'Product') {
           return <Product />;
-        }
-        if (currentPage === 'Shop') {
-          return <Shop />;
-        }
-        if (currentPage === 'Gift') {
-          return <Gift />;
         }
         if (currentPage === 'Contact') {
           return <Contact handlePageChange={handlePageChange} />;
