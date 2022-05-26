@@ -84,8 +84,8 @@ const typeDefs = gql `
         addBlog(title: String!, text: String!, image: String!): Blog
         addInvoice(products: [ID]!): Invoice
         addNote(name: String, email: String!, message: String!, read: Boolean): Note
-        addProduct(sku: String!, name: String!, description: String!, usdPrice: Float!, image: String!, imageAlt: String!, quantity: String!): Product
-        editProduct(_id: ID!, sku: String!, name: String!, description: String!, usdPrice: Float!, image: String!, imageAlt: String!, quantity: String!): Product
+        addProduct(sku: String!, name: String!, description: String!, usdPrice: Int!, image: String!, imageAlt: String!, quantity: Int!): Product
+        editProduct(_id: ID!, sku: String!, name: String!, description: String!, usdPrice: Int!, image: String!, imageAlt: String!, quantity: Int!): Product
         updateProduct(_id: ID!, quantity: Int!): Product
         removeProduct(_id: ID!): Product
         addUser(firstName: String!, lastName: String!, email: String!, password: String!, admin: Boolean): Auth
