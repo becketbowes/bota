@@ -368,30 +368,23 @@ input {
   line-height: 1.6;
 }
 
-/* Accordion FAQs */
-.dropbtn {
-  background-color: var(--back);
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+/* FAQs */
+
+.faq {
+  text-align: center;
+}
+.chapter{
+  text-align: center;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
+.question {
+  font-weight: bold;
+  text-align: center;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
+.answer {
+  font-weight: lighter;
+  text-align: center;
 }
 
 .successful-purchase {

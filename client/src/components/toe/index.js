@@ -3,7 +3,6 @@ import dot from '../../assets/img/botadot.png';
 import Toenav from './toenav.js';
 import Contact from '../contact/index';
 import FAQ from '../FAQ/index';
-import Home from '../home/index';
 
 function Toe() {
     const [toenav, setToenav] = useState(false);
@@ -36,7 +35,6 @@ function Toe() {
                 <Toenav toenav={toenav} currentPage={currentPage} handlePageChange={handlePageChange} />
                 {renderPage()}
             </div>
-            {/*<Toenav toenav={toenav} /> */}
         </footer>
     );
 }

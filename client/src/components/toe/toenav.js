@@ -20,7 +20,7 @@ function Toenav({ currentPage, handlePageChange, toenav }) {
           Contact</a>
       </li>
       <li>
-        <a href='#FAQ' onClick={() => handlePageChange('About')}
+        <a href='#FAQ' onClick={() => handlePageChange('FAQ')}
         className={currentPage === 'FAQ' ? 'footer-link active' : 'footer-link'} >
           FAQ
         </a>
