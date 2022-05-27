@@ -9,7 +9,6 @@ import Home from '../home';
 import Login from '../Login';
 import SignUp from '../SignUp'
 import Detail from '../Detail'
-import SignUp from '../SignUp';
 
 function Head() {
     const [nav, setNav] = useState(false);
