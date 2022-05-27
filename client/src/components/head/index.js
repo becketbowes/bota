@@ -6,8 +6,8 @@ import About from '../about';
 import Contact from '../contact';
 import Product from '../product';
 import Home from '../home';
-import Admin from '../admin';
-import Login from '../Login'
+import Login from '../Login';
+import SignUp from '../SignUp'
 import Detail from '../Detail'
 import SignUp from '../SignUp';
 
@@ -41,8 +41,8 @@ function Head() {
         if (currentPage === 'Contact') {
           return <Contact handlePageChange={handlePageChange} />;
         }
-        if (currentPage === 'Admin') {
-          return <Admin />;
+        if (currentPage === 'Signup') {
+          return <SignUp />;
         }
         if (currentPage === 'Home') {
           return <Home />;

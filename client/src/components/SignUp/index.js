@@ -66,6 +66,7 @@ function SignUp() {
     }
 
     return(
+        <div className="contact-item">
         <section className="signup">
             {/* <div>
                 <h1 className="section-title">SignUp</h1>
@@ -97,6 +98,7 @@ function SignUp() {
                 </form>
             </div>    
         </section>
+        </div>
     )
 }
 
