@@ -1,4 +1,4 @@
-import { AuthenticationError } from('apollo-server-express');;
+const { AuthenticationError } = require ('apollo-server-express');;
 import { Product, User, Note, Blog, Invoice, VibeText, VibeImage } from ('../models');
 import { signToken } from ('../utils/auth');
 // const { kind } = require('./typeDefs');
