@@ -1,7 +1,7 @@
 # bota 1.0
-  ![Creative Commons Attribution License, Thu May 26 2022 20:07:33 GMT-0400 (Eastern Daylight Time)](./assets/img/readme/cc-by.png)
+  ![Creative Commons Attribution License, Thu May 26 2022 20:07:33 GMT-0400 (Eastern Daylight Time)](./client/src/assets/img/cc-by.png)
 
-  ![bota screenshot](./assets/img/readme/botaReadme.jpg)
+  ![bota screenshot](./client/src/assets/img/botaReadme.jpg)
 
   ## OVERVIEW:
    A mobile-first lifestyle and e-commerce website. This was built to promote the Bota lifestyle and promote the sustainable and ethically sourced Bota products. Currently the single product is a subscription service to body butter, that comes in handmade, reusable ceramic ramikens. The site is engineered to be updatable and maintainable by the owner, with a functioning admin page to update state, products and presence for the user experience. The site is aimed at using technology and design in service of promoting healthy and sustainable lifestyle and products.
