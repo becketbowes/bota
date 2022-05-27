@@ -9,6 +9,7 @@ import Home from '../home';
 import Admin from '../admin';
 import Login from '../Login'
 import Detail from '../Detail'
+import SignUp from '../SignUp';
 
 function Head() {
     const [nav, setNav] = useState(false);
@@ -27,6 +28,9 @@ function Head() {
     const renderPage = () => {
         if (currentPage === 'Login') {
           return <Login />;
+        }
+        if (currentPage === 'SignUp') {
+          return <SignUp />;
         }
         if (currentPage === 'About') {
           return <About />;
