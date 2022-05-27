@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../utils/helpers';
-import Adminlogin from '../Adminlogin';
+import Admin from '../admin';
 import { useMutation } from '@apollo/client'
 import { ADD_NOTE } from '../utils/mutations'
 
@@ -53,7 +53,7 @@ function Contact() {
   return (
     <>
       {login ?
-          <Adminlogin />
+          <Admin />
         : 
         <section className="contact-item">
           <div className=''>
