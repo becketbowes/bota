@@ -15,7 +15,6 @@ function Login() {
     const handleChange = (e) => {
         if(e.target.name === 'email') {
             const isValid = validateEmail(e.target.value);
-            console.log(isValid)
 
             //isValid conditional statement 
             if(!isValid) {
@@ -30,7 +29,11 @@ function Login() {
             } else {
                 setErrorMessage('')
             }
-            console.log('errorMessage', errorMessage);
+            // console.log('errorMessage', errorMessage);
+        }
+
+        if(errorMessage) {
+            setErrorMessage('Incorrect credentials')
         }
 
         //wrapped in a conditional, so that the state only updates if the form data passed the quality tests
@@ -39,13 +42,11 @@ function Login() {
             setFormState({...formState, [e.target.name]: e.target.value})
         }
     }
-    
-    console.log(formState)
 
     //this function handles submission of the form data
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formState)
+        // console.log(formState)
 
         const mutationResponse = await login({
             variables: {
@@ -81,6 +82,13 @@ function Login() {
                         )}
                     </div>
                     <button type="submit">Submit</button>
+                    {/* <br />
+                    <br />
+                    <br />
+                    <h2>
+                        Dont have an account? Sign up below!
+                    </h2>
+                    <SignUp /> */}
                 </form>
             </div>    
         </section>

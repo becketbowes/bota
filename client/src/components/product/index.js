@@ -43,14 +43,13 @@ function Product() {
                 <p className="product-item2"> macadamia seed oil, castor seed oil, sunflower oil, vetiver root, cedarwood oil, grapefruit peel oil, bergamot fruit oil, vanilla bean extract</p>
                 <br></br>
             </div>
-            {/* <div className="product-item"> */}
+            <div className="product-item">
                 {/* <Wares /> */}
-            {/* </div> */}
-
-            <button className='addtocart' data-testid="button" onClick={handleSubmit} type="submit">
+                <button className='addtocart' data-testid="button" onClick={handleSubmit} type="submit">
                 <h1 className="product-item1"> ADD TO CART</h1> 
             </button>
             <p className="product-item2"> $45 USD </p> 
+            </div>
         </div>
     )
 };

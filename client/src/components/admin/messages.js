@@ -9,7 +9,7 @@ function Messages() {
 
     return (
         <>
-            {notes.length && notes.reverse().map((message) => (
+            {notes.map((message) => (
                 <article className="adminuItem">
                     <div className="adminuTitle">{message.name}</div>
                     <span className="adminuMeta">{message.createdAt}</span>

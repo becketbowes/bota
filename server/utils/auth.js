@@ -1,8 +1,11 @@
 require('dotenv').config();
 const jwt = require("jsonwebtoken");
+
 const secret = "onesecretpls";
 const expiration = "1hr";
+
 // console.log(process.env);
+
 module.exports = {
   authMiddleware: function ({ req }) {
     let token = req.body.token || req.query.token || req.headers.authorization;

@@ -68,10 +68,10 @@ function SignUp() {
     return(
         <div className="contact-item">
         <section className="signup">
-            <div>
+            {/* <div>
                 <h1 className="section-title">SignUp</h1>
-            </div>
-            <div>
+            </div> */}
+            <div className="contact-item">
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="firstName">First Name</label>

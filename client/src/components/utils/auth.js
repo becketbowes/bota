@@ -28,17 +28,19 @@ getToken() {
   return localStorage.getItem('id_token');
 }
 
-login(idToken, admin) {
+login(idToken) {
   // Saves user token to localStorage
   localStorage.setItem('id_token', idToken);
+  
+    window.location.assign('/');
 
-  if(!admin) {
-    window.location.assign('/product');
-  }
+  // if(!admin) {
+  //   window.location.assign('/product');
+  // }
 
-  if(admin) {
-    window.location.assign('/admin');
-  }
+  // if(admin) {
+  //   window.location.assign('/admin');
+  // }
   
 }
 
