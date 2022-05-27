@@ -7,42 +7,42 @@ import Auth from '../utils/auth';
 
 function SignUp() {
     const [ formState, setFormState ] = useState({ firstName: '', lastName: '', email: '', password: ''});
-    // const [errorMessage, setErrorMessage] = useState('');
-    // const { firstName, lastName, email, password } = formState
+    const [errorMessage, setErrorMessage] = useState('');
+    const { firstName, lastName, email, password } = formState
     const [addUser] = useMutation(ADD_USER)
     
     //syncing the internal state of the component formState with the user input from the DOM. 
     const handleChange = async (e) => {
-        // if(e.target.name === 'email') {
-        //     const isValid = validateEmail(e.target.value);
-        //     console.log(isValid)
+        if(e.target.name === 'email') {
+            const isValid = validateEmail(e.target.value);
+            console.log(isValid)
 
-        //     //isValid conditional statement 
-        //     if(!isValid) {
-        //         setErrorMessage('Your email is invalid')
-        //     } else {
-        //         setErrorMessage('')
-        //     }
-        // } else {
-        //     //no validation needed for message or name inputs, so just checks that something was inputted in those two fields. If not, then an error message will appear
-        //     if(!e.target.value.length) {
-        //         setErrorMessage(`${e.target.name} is required.`)
-        //     } else {
-        //         setErrorMessage('')
-        //     }
-        //     console.log('errorMessage', errorMessage);
+            //isValid conditional statement 
+            if(!isValid) {
+                setErrorMessage('Your email is invalid')
+            } else {
+                setErrorMessage('')
+            }
+        } else {
+            //no validation needed for message or name inputs, so just checks that something was inputted in those two fields. If not, then an error message will appear
+            if(!e.target.value.length) {
+                setErrorMessage(`${e.target.name} is required.`)
+            } else {
+                setErrorMessage('')
+            }
+            console.log('errorMessage', errorMessage);
 
-            e.preventDefault();
-            await addUser({ variables: formState})
-            console.log('form State', formState)
-            setFormState('')
-        // }
+            // e.preventDefault();
+            // await addUser({ variables: formState})
+            // console.log('form State', formState)
+            // setFormState('')
+        }
 
-        // //wrapped in a conditional, so that the state only updates if the form data passed the quality tests
-        // if(!errorMessage) {
-        //     //the name property of target refers to the name attribute of the form element
-        //     setFormState({...formState, [e.target.name]: e.target.value})
-        // }
+        //wrapped in a conditional, so that the state only updates if the form data passed the quality tests
+        if(!errorMessage) {
+            //the name property of target refers to the name attribute of the form element
+            setFormState({...formState, [e.target.name]: e.target.value})
+        }
     }
     
     console.log(formState)
@@ -67,10 +67,10 @@ function SignUp() {
 
     return(
         <section className="signup">
-            <div>
+            {/* <div>
                 <h1 className="section-title">SignUp</h1>
-            </div>
-            <div>
+            </div> */}
+            <div className="contact-item">
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="firstName">First Name</label>

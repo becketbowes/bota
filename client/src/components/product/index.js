@@ -6,6 +6,14 @@ import Wares from '../wares';
 
 function Product() {
 
+    const handleSubmit= (e) => {
+        e.preventDefault();
+
+        console.log("You clicked me!")
+
+        
+    }
+
     return (
         <div className="product">
             <div className="product-title">
@@ -36,7 +44,11 @@ function Product() {
                 <br></br>
             </div>
             <div className="product-item">
-                <Wares />
+                {/* <Wares /> */}
+                <button className='addtocart' data-testid="button" onClick={handleSubmit} type="submit">
+                <h1 className="product-item1"> ADD TO CART</h1> 
+            </button>
+            <p className="product-item2"> $45 USD </p> 
             </div>
         </div>
     )

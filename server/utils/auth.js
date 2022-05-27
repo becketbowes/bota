@@ -1,7 +1,10 @@
-require('dotenv').config()
+require('dotenv').config();
+const jwt = require("jsonwebtoken");
+
+const secret = "onesecretpls";
 const expiration = "1hr";
 
-console.log(process.env);
+// console.log(process.env);
 
 module.exports = {
   authMiddleware: function ({ req }) {
@@ -16,7 +19,7 @@ module.exports = {
     }
 
     try {
-      const { data } = jwt.verify(token, process.env.JWT, { maxAge: expiration });
+      const { data } = jwt.verify(token, secret, { maxAge: expiration });
       req.user = data;
     } catch {
       console.log("Invalid token");

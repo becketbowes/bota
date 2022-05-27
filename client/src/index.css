@@ -1,3 +1,10 @@
+
+.addtocart {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
 /* thematic color variables */
 * {
   --front: rgb(37, 38, 34);

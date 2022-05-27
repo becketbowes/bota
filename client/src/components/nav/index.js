@@ -15,6 +15,12 @@ function Nav({ currentPage, handlePageChange, nav }) {
       <div className='navAnchor'>
         <ul className='navFloat'>
         <li className="link">
+            <span href='#SignUp' onClick={() => handlePageChange('SignUp') }
+              className={currentPage === 'SignUp' ? 'nav-link active' : 'nav-link'}>
+                SignUp
+              </span>
+          </li>
+        <li className="link">
             <span href='#Login' onClick={() => handlePageChange('Login') }
               className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'}>
                 Login
