@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost:3333/bota",
+  process.env.MONGODB_URI || "mongodb://localhost:3000/bota",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

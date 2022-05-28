@@ -27,12 +27,6 @@ function Nav({ currentPage, handlePageChange, nav }) {
               </span>
           </li>
           <li className="link">
-            <span href='#Signup' onClick={() => handlePageChange('Signup') }
-              className={currentPage === 'Signup' ? 'nav-link active' : 'nav-link'}>
-                Signup
-              </span>
-          </li>
-          <li className="link">
             <span href='#About' onClick={() => handlePageChange('About')}
               className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}>
                 About
