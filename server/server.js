@@ -16,9 +16,20 @@ const server = new ApolloServer({
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+app.use("/images", express.static(path.join(__dirname, "../client/src/assets/img")));
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/build")));
+}
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
+
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start()
   server.applyMiddleware({ app });
+
   db.once('open', () => {
     app.listen(PORT, () => {
       console.log(`API running on port ${PORT}`);
@@ -26,15 +37,5 @@ const startApolloServer = async (typeDefs, resolvers) => {
     })
   })
 };
-
-app.use("/.images", express.static(path.join(__dirname, "../public/images")));
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../")));
-}
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build"));
-});
 
 startApolloServer(typeDefs, resolvers);
