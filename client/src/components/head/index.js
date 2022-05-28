@@ -7,13 +7,8 @@ import Contact from '../contact';
 import Product from '../product';
 import Home from '../home';
 import Login from '../Login';
-<<<<<<< HEAD
-import SignUp from '../SignUp';
-import Detail from '../Detail';
-=======
 import SignUp from '../SignUp'
 import Detail from '../Detail'
->>>>>>> e8223791eb7eff3dfcf25464eede87f59494b38c
 
 
 
