@@ -424,13 +424,13 @@ input {
   overflow: hidden;
   z-index: -1;
 }
-
+/* 
 .sliding-background {
   background: url("../img/HomeSlides.jpg") repeat-x;
   height: 500px;
   width: 3000px;
   animation: slide 60s linear infinite;
-}
+} */
 
 @keyframes slide {
   0% {

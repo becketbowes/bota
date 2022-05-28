@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/bota/static/css/main.43e17c3c.css",
+    "main.css": "/bota/static/css/main.8099da00.css",
     "main.js": "/bota/static/js/main.587cc75d.js",
-    "static/media/HomeSlides.jpg": "/bota/static/media/HomeSlides.49fec8f1fb07182f8c63.jpg",
     "static/media/P1000186.jpg": "/bota/static/media/P1000186.9e2baac0c494ab6a41f9.jpg",
     "static/media/P1000229.jpg": "/bota/static/media/P1000229.a184729f5836b18d27d1.jpg",
     "static/media/P1000171.jpg": "/bota/static/media/P1000171.88e5778847275f988ff5.jpg",
@@ -10,11 +9,11 @@
     "static/media/P1000168.jpg": "/bota/static/media/P1000168.e9b545270103bb996f16.jpg",
     "static/media/botadot.png": "/bota/static/media/botadot.59bd4490fb152d4dbad4.png",
     "index.html": "/bota/index.html",
-    "main.43e17c3c.css.map": "/bota/static/css/main.43e17c3c.css.map",
+    "main.8099da00.css.map": "/bota/static/css/main.8099da00.css.map",
     "main.587cc75d.js.map": "/bota/static/js/main.587cc75d.js.map"
   },
   "entrypoints": [
-    "static/css/main.43e17c3c.css",
+    "static/css/main.8099da00.css",
     "static/js/main.587cc75d.js"
   ]
 }
