@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  process.env.MONGDB_URI || "mongodb://localhost:27017/bota-databas?directConnection=true" || process.env.MONGODB_URI,
+  process.env.MONGDB_URI || "mongodb://127.0.0.1/mernshopping" || process.env.MONGODB_URI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
