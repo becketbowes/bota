@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import logo from '../../assets/img/botalogoclear.png';
 import dot from '../../assets/img/botadot.png';
 import Nav from '../nav';
@@ -7,9 +7,8 @@ import Contact from '../contact';
 import Product from '../product';
 import Home from '../home';
 import Login from '../Login';
-import SignUp from '../SignUp'
-import Detail from '../Detail'
 import SignUp from '../SignUp';
+import Detail from '../Detail';
 
 function Head() {
     const [nav, setNav] = useState(false);
