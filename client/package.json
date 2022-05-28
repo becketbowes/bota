@@ -1,7 +1,7 @@
 {
   "name": "bota",
   "version": "0.1.0",
-  "homepage": "http://becketbowes.github.io/bota",
+  "homepage": "https://botabotabota.herokuapp.com/",
   "private": true,
   "proxy": "http://localhost:3001",
   "engines": {
