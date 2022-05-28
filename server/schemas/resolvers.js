@@ -1,7 +1,6 @@
-const { AuthenticationError } = require('apollo-server-express');;
-const { Product, User, Note, Blog, Invoice, VibeText, VibeImage } = require('../models');
+const { AuthenticationError } = require('apollo-server-express');
+const { Product, User, Note, Blog, Invoice, VibeText, VibeImage } = require("../models");
 const { signToken } = require('../utils/auth');
-const { kind } = require('./typeDefs');
 //second parentheses is the test key. Once a real Stripe account is created, replace this with an environment variable, i.e. process.env.STRIPE_KEY
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc')
 
